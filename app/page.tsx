@@ -1,109 +1,118 @@
+"use client";
+import { motion } from "framer-motion";
+import ParticlesBackground from "../components/ParticlesBackground";
+
+<motion.section
+  initial={{ opacity: 0, y: 80 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="py-32 px-6 border-t border-white/5"
+></motion.section>
+
 export default function Home() {
   return (
     <main className="bg-black text-white overflow-hidden relative">
+      <ParticlesBackground />
 
-      {/* 배경 네온 글로우 */}
-      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-indigo-600 opacity-20 blur-[200px] -z-10" />
-
-      {/* ================= NAVBAR ================= */}
-      <header className="fixed top-0 w-full backdrop-blur-xl bg-black/40 border-b border-white/5 z-50">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="font-bold tracking-wide">AROTECH</h1>
-          <nav className="hidden md:flex gap-8 text-sm opacity-80">
-            <a href="#games" className="hover:opacity-100">Games</a>
-            <a href="#vision" className="hover:opacity-100">Vision</a>
-            <a href="#careers" className="hover:opacity-100">Careers</a>
-            <a href="#contact" className="hover:opacity-100">Contact</a>
-          </nav>
-        </div>
-      </header>
+      {/* ================= BACKGROUND FX ================= */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black via-zinc-950 to-black" />
+      <div className="absolute top-[-300px] left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-indigo-600 opacity-20 blur-[220px] -z-10" />
 
       {/* ================= HERO ================= */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-32">
-        <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight mb-6">
-          WE BUILD
-          <br />
-          <span className="text-indigo-500">GAME SYSTEMS</span>
-        </h1>
-        <p className="opacity-60 max-w-xl text-lg">
-          구조와 전략이 살아있는 게임을 설계하는
-          차세대 스튜디오
-        </p>
-      </section>
+<section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
 
-      {/* ================= DASHBOARD STYLE SECTION ================= */}
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover opacity-40"
+  >
+    <source src="/logo.mp4" type="video/mp4" />
+  </video>
+
+  <div className="relative z-10 px-6">
+    <h1 className="text-7xl md:text-9xl font-extrabold">
+      BUILD THE SYSTEM
+    </h1>
+  </div>
+
+</section>
+
+      {/* ================= STUDIO STATS ================= */}
       <section className="py-32 px-6 border-t border-white/5">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
 
-          <div className="bg-zinc-900/70 p-8 rounded-2xl border border-white/10">
-            <h3 className="text-3xl font-bold text-indigo-500">2</h3>
-            <p className="opacity-60 mt-2">Active Projects</p>
+          <div className="bg-zinc-900/60 backdrop-blur-xl p-10 rounded-3xl border border-white/10 hover:border-indigo-500 transition">
+            <h3 className="text-5xl font-bold text-indigo-500">2</h3>
+            <p className="opacity-60 mt-4">Active Titles</p>
           </div>
 
-          <div className="bg-zinc-900/70 p-8 rounded-2xl border border-white/10">
-            <h3 className="text-3xl font-bold text-indigo-500">100%</h3>
-            <p className="opacity-60 mt-2">In-house Planning</p>
+          <div className="bg-zinc-900/60 backdrop-blur-xl p-10 rounded-3xl border border-white/10 hover:border-indigo-500 transition">
+            <h3 className="text-5xl font-bold text-indigo-500">IP</h3>
+            <p className="opacity-60 mt-4">Original Concepts</p>
           </div>
 
-          <div className="bg-zinc-900/70 p-8 rounded-2xl border border-white/10">
-            <h3 className="text-3xl font-bold text-indigo-500">∞</h3>
-            <p className="opacity-60 mt-2">Scalable Systems</p>
+          <div className="bg-zinc-900/60 backdrop-blur-xl p-10 rounded-3xl border border-white/10 hover:border-indigo-500 transition">
+            <h3 className="text-5xl font-bold text-indigo-500">∞</h3>
+            <p className="opacity-60 mt-4">Scalable Systems</p>
           </div>
 
         </div>
       </section>
 
-      {/* ================= OUR GAMES ================= */}
+      {/* ================= PROJECTS ================= */}
       <section id="games" className="py-32 px-6 border-t border-white/5">
-        <h2 className="text-4xl font-bold text-center mb-20">
+        <h2 className="text-5xl font-bold text-center mb-24 tracking-tight">
           OUR PROJECTS
         </h2>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
 
-          <div className="group relative bg-zinc-900 p-12 rounded-3xl border border-white/10 hover:border-indigo-500 transition duration-500">
-            <h3 className="text-3xl font-bold mb-6">BCM</h3>
-            <p className="opacity-60 mb-6">
-              깊이 있는 운영 전략을 구현한
-              야구 경영 시뮬레이션
+          {/* BCM */}
+          <div className="relative group bg-zinc-900 rounded-3xl p-14 border border-white/10 hover:border-indigo-500 transition duration-500 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/10 to-transparent opacity-0 group-hover:opacity-100 transition" />
+            <h3 className="text-4xl font-bold mb-6">BCM</h3>
+            <p className="opacity-60 mb-10 text-lg">
+              전략과 데이터 기반 운영이 결합된
+              차세대 야구 시뮬레이션.
             </p>
+            <a className="text-indigo-400 underline hover:opacity-100 opacity-70 transition">
+              Explore →
+            </a>
           </div>
 
-          <div className="group relative bg-zinc-900 p-12 rounded-3xl border border-white/10 hover:border-pink-500 transition duration-500">
-            <h3 className="text-3xl font-bold mb-6">Dear Idol</h3>
-            <p className="opacity-60 mb-6">
-              감성과 전략이 결합된
-              아이돌 프로듀싱 프로젝트
+          {/* Dear Idol */}
+          <div className="relative group bg-zinc-900 rounded-3xl p-14 border border-white/10 hover:border-pink-500 transition duration-500 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-pink-600/10 to-transparent opacity-0 group-hover:opacity-100 transition" />
+            <h3 className="text-4xl font-bold mb-6">Dear Idol</h3>
+            <p className="opacity-60 mb-10 text-lg">
+              감성과 전략이 만나는
+              차세대 아이돌 프로듀싱 프로젝트.
             </p>
+            <a className="text-pink-400 underline hover:opacity-100 opacity-70 transition">
+              Explore →
+            </a>
           </div>
 
         </div>
       </section>
 
       {/* ================= VISION ================= */}
-      <section id="vision" className="py-32 px-6 border-t border-white/5 text-center">
-        <h2 className="text-4xl font-bold mb-10">
-          OUR VISION
+      <section className="py-40 px-6 border-t border-white/5 text-center">
+        <h2 className="text-6xl font-extrabold tracking-tight mb-10">
+          DESIGN. SYSTEM. EXPERIENCE.
         </h2>
-        <p className="max-w-3xl mx-auto opacity-60 text-lg">
-          우리는 단기 트렌드가 아닌,
-          구조적 완성도를 통해 지속 가능한 IP를 구축합니다.
-        </p>
-      </section>
-
-      {/* ================= CAREERS ================= */}
-      <section id="careers" className="py-32 px-6 border-t border-white/5 text-center">
-        <h2 className="text-4xl font-bold mb-10">
-          CAREERS
-        </h2>
-        <p className="opacity-60 mb-8">
-          함께 시스템을 설계할 동료를 찾습니다.
+        <p className="max-w-3xl mx-auto opacity-60 text-lg leading-relaxed">
+          우리는 단기 유행이 아닌,
+          구조적 완성도를 통해 오래 남는 게임을 만듭니다.
         </p>
       </section>
 
       {/* ================= CONTACT ================= */}
       <section id="contact" className="py-32 px-6 border-t border-white/5 text-center">
-        <h2 className="text-4xl font-bold mb-6">
+        <h2 className="text-4xl font-bold mb-8">
           CONTACT
         </h2>
         <p className="opacity-60">
