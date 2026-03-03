@@ -1,26 +1,32 @@
 export default function Home() {
   return (
-    <main className="bg-black text-white scroll-smooth">
+    <main className="bg-black text-white overflow-hidden">
+
+      {/* ===== Background Gradient Glow ===== */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-zinc-900 via-black to-black" />
+      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-purple-600 opacity-10 blur-[180px] -z-10" />
 
       {/* ================= HERO ================= */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center px-6">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+        <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight mb-6">
           AROTECH STUDIO
         </h1>
-        <p className="text-lg md:text-xl opacity-70 max-w-2xl mb-10 leading-relaxed">
-          새로운 장르의 경험을 설계하는 게임 스튜디오
+        <p className="text-lg md:text-xl opacity-60 max-w-2xl leading-relaxed mb-12">
+          새로운 장르의 경험을 설계하는
+          <br />
+          차세대 게임 스튜디오
         </p>
 
         <div className="flex gap-6">
           <a
             href="#games"
-            className="px-8 py-3 bg-white text-black rounded-xl font-semibold hover:opacity-80 transition"
+            className="px-8 py-3 rounded-full bg-white text-black font-semibold hover:scale-105 transition duration-300"
           >
-            Our Games
+            Explore Projects
           </a>
           <a
             href="#contact"
-            className="px-8 py-3 border border-white rounded-xl hover:bg-white hover:text-black transition"
+            className="px-8 py-3 rounded-full border border-white/30 hover:bg-white hover:text-black transition duration-300"
           >
             Contact
           </a>
@@ -28,52 +34,56 @@ export default function Home() {
       </section>
 
       {/* ================= ABOUT ================= */}
-      <section className="py-28 px-6 bg-zinc-900">
+      <section className="py-36 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-10">About</h2>
-          <p className="opacity-70 leading-relaxed text-lg">
+          <h2 className="text-4xl font-bold mb-10 tracking-tight">
+            About
+          </h2>
+          <p className="opacity-60 text-lg leading-relaxed">
             AROTECH는 창의성과 시스템 설계를 기반으로
             깊이 있는 게임 경험을 만드는 스튜디오입니다.
-            우리는 장르에 갇히지 않고,
-            플레이어가 오래 즐길 수 있는 구조와
-            지속 가능한 콘텐츠를 연구합니다.
+            우리는 트렌드를 따르기보다,
+            구조와 완성도를 통해 오래 남는 게임을 만듭니다.
           </p>
         </div>
       </section>
 
       {/* ================= OUR GAMES ================= */}
-      <section id="games" className="py-28 px-6">
-        <h2 className="text-4xl font-bold text-center mb-16">
-          Our Games
+      <section
+        id="games"
+        className="py-36 px-6 border-t border-white/5"
+      >
+        <h2 className="text-4xl font-bold text-center mb-20 tracking-tight">
+          Our Projects
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
 
-          {/* BCM */}
-          <div className="bg-zinc-900 p-10 rounded-2xl hover:scale-105 transition duration-300 border border-zinc-800">
-            <h3 className="text-2xl font-bold mb-4">BCM</h3>
-            <p className="opacity-70 mb-6">
+          <div className="group relative bg-zinc-900/60 backdrop-blur-xl p-12 rounded-3xl border border-white/10 hover:border-white/30 transition duration-500">
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition" />
+            <h3 className="text-3xl font-bold mb-6">BCM</h3>
+            <p className="opacity-60 leading-relaxed mb-8">
               전략과 운영의 깊이를 담은
               차세대 야구 경영 시뮬레이션 게임.
             </p>
             <a
               href="https://bcm-game.com"
-              className="text-white underline opacity-80 hover:opacity-100"
+              className="underline opacity-70 hover:opacity-100 transition"
             >
               Visit Website →
             </a>
           </div>
 
-          {/* Dear Idol */}
-          <div className="bg-zinc-900 p-10 rounded-2xl hover:scale-105 transition duration-300 border border-zinc-800">
-            <h3 className="text-2xl font-bold mb-4">Dear Idol</h3>
-            <p className="opacity-70 mb-6">
+          <div className="group relative bg-zinc-900/60 backdrop-blur-xl p-12 rounded-3xl border border-white/10 hover:border-white/30 transition duration-500">
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition" />
+            <h3 className="text-3xl font-bold mb-6">Dear Idol</h3>
+            <p className="opacity-60 leading-relaxed mb-8">
               감성과 전략이 결합된
               차세대 아이돌 프로듀싱 프로젝트.
             </p>
             <a
               href="https://dearidol.game"
-              className="text-white underline opacity-80 hover:opacity-100"
+              className="underline opacity-70 hover:opacity-100 transition"
             >
               Visit Website →
             </a>
@@ -83,46 +93,49 @@ export default function Home() {
       </section>
 
       {/* ================= VISION ================= */}
-      <section className="py-28 px-6 bg-zinc-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-10">Our Vision</h2>
-          <p className="opacity-70 leading-relaxed text-lg">
-            우리는 단기적인 트렌드를 따르기보다,
-            시간이 지나도 가치가 유지되는 게임을 만듭니다.
-            시스템의 완성도와 플레이어 경험의 깊이를 통해
-            지속 가능한 IP를 구축하는 것이 우리의 목표입니다.
-          </p>
-        </div>
+      <section className="py-36 px-6 border-t border-white/5 text-center">
+        <h2 className="text-4xl font-bold mb-10 tracking-tight">
+          Our Vision
+        </h2>
+        <p className="max-w-3xl mx-auto opacity-60 text-lg leading-relaxed">
+          우리는 단기적인 유행보다,
+          시간이 지나도 가치가 유지되는 구조를 설계합니다.
+          지속 가능한 IP와 깊이 있는 플레이 경험이
+          우리의 목표입니다.
+        </p>
       </section>
 
       {/* ================= CAREERS ================= */}
-      <section className="py-28 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-10">Careers</h2>
-          <p className="opacity-70 mb-8 text-lg">
-            AROTECH와 함께 새로운 게임 경험을 만들어갈
-            인재를 기다립니다.
-          </p>
-          <a
-            href="mailto:contact@arotech.co.kr"
-            className="px-8 py-3 bg-white text-black rounded-xl font-semibold hover:opacity-80 transition"
-          >
-            Apply Now
-          </a>
-        </div>
+      <section className="py-36 px-6 border-t border-white/5 text-center">
+        <h2 className="text-4xl font-bold mb-10 tracking-tight">
+          Careers
+        </h2>
+        <p className="opacity-60 mb-10 text-lg">
+          AROTECH와 함께 새로운 경험을 설계할
+          동료를 기다립니다.
+        </p>
+        <a
+          href="mailto:contact@arotech.co.kr"
+          className="px-8 py-3 rounded-full bg-white text-black font-semibold hover:scale-105 transition duration-300"
+        >
+          Apply Now
+        </a>
       </section>
 
       {/* ================= CONTACT ================= */}
-      <section id="contact" className="py-28 px-6 bg-zinc-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-10">Contact</h2>
-          <p className="opacity-70 text-lg">
-            Business / Partnership / Publishing 문의는 아래 이메일로 연락해주세요.
-          </p>
-          <p className="mt-6 text-xl font-semibold">
-            contact@arotech.co.kr
-          </p>
-        </div>
+      <section
+        id="contact"
+        className="py-36 px-6 border-t border-white/5 text-center"
+      >
+        <h2 className="text-4xl font-bold mb-10 tracking-tight">
+          Contact
+        </h2>
+        <p className="opacity-60 mb-6">
+          Business / Publishing / Partnership 문의
+        </p>
+        <p className="text-xl font-semibold">
+          contact@arotech.co.kr
+        </p>
       </section>
 
     </main>
