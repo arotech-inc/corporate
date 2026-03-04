@@ -6,11 +6,11 @@ import ParticlesBackground from "../components/ParticlesBackground";
 
 export default function Home() {
   const fadeUp = {
-    hidden: { opacity: 0, y: 80 },
+    hidden: { opacity: 0, y: 60 },
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8 },
+      transition: { duration: 0.7 },
     },
   };
 
@@ -24,36 +24,47 @@ export default function Home() {
       <ParticlesBackground />
 
       {/* NAVBAR */}
-      <header className="fixed top-0 w-full backdrop-blur-xl bg-black/40 border-b border-white/5 z-50">
+      <header className="fixed top-0 w-full backdrop-blur-xl bg-black/50 border-b border-white/5 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="font-bold tracking-wide">AROTECH</h1>
           <nav className="hidden md:flex gap-8 text-sm text-white/70">
             <a href="#games" className="hover:text-white transition">Games</a>
             <a href="#vision" className="hover:text-white transition">Vision</a>
+            <a href="#careers" className="hover:text-white transition">Careers</a>
             <a href="#contact" className="hover:text-white transition">Contact</a>
           </nav>
         </div>
       </header>
 
-      {/* HERO */}
-      <section className="relative min-h-screen flex items-center justify-center text-center pt-32 overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
-        >
-          <source src="/logo.mp4" type="video/mp4" />
-        </video>
+      {/* HERO (반응형 개선 버전) */}
+      <section className="relative w-full pt-28 md:pt-40 overflow-hidden">
 
-        <div className="relative z-10 px-6">
-          <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight">
-            BUILD THE SYSTEM
-          </h1>
-          <p className="mt-6 max-w-xl mx-auto opacity-60 text-lg">
-            구조와 전략이 살아있는 게임을 설계하는 차세대 스튜디오
-          </p>
+        {/* 모바일에서는 높이 줄임 */}
+        <div className="relative w-full h-[70vh] md:h-screen">
+
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/logo.mp4" type="video/mp4" />
+          </video>
+
+          <div className="absolute inset-0 bg-black/60" />
+
+          <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
+            <div>
+              <h1 className="text-4xl sm:text-5xl md:text-8xl font-extrabold tracking-tight">
+                BUILD THE SYSTEM
+              </h1>
+              <p className="mt-6 max-w-xl mx-auto opacity-70 text-base md:text-lg">
+                구조와 전략이 살아있는 게임을 설계하는 차세대 스튜디오
+              </p>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -72,9 +83,8 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
 
-          {/* BCM */}
           <div className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:border-indigo-500 hover:scale-105">
-            <div className="relative h-80 overflow-hidden">
+            <div className="relative h-72 md:h-80 overflow-hidden">
               <Image
                 src="/bcm.jpg"
                 alt="BCM Screenshot"
@@ -91,9 +101,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Dear Idol */}
           <div className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:border-pink-500 hover:scale-105">
-            <div className="relative h-80 overflow-hidden">
+            <div className="relative h-72 md:h-80 overflow-hidden">
               <Image
                 src="/idol.jpg"
                 alt="Dear Idol Visual"
@@ -130,7 +139,22 @@ export default function Home() {
         </p>
       </motion.section>
 
-      {/* CONTACT (복구) */}
+      {/* CAREERS */}
+      <motion.section
+        id="careers"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false }}
+        variants={fadeUp}
+        className="py-40 px-6 border-t border-white/5 text-center"
+      >
+        <h2 className="text-4xl font-bold mb-10">CAREERS</h2>
+        <p className="opacity-60 max-w-2xl mx-auto mb-8">
+          AROTECH와 함께 새로운 경험을 설계할 동료를 찾습니다.
+        </p>
+      </motion.section>
+
+      {/* CONTACT */}
       <motion.section
         id="contact"
         initial="hidden"
@@ -141,7 +165,7 @@ export default function Home() {
       >
         <h2 className="text-4xl font-bold mb-8">CONTACT</h2>
         <p className="opacity-60 mb-4">
-          Business / Partnership / Publishing 문의
+          Business / Partnership 문의
         </p>
         <p className="text-lg font-semibold">
           arotech@arotech.co.kr
