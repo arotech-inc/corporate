@@ -36,9 +36,8 @@ export default function Home() {
         </div>
       </header>
 
-      {/* ================= HERO (영상 안 잘리게 수정) ================= */}
-      <section className="relative h-screen w-full bg-black flex items-center justify-center overflow-hidden">
-
+      {/* HERO */}
+      <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-black">
         <video
           autoPlay
           muted
@@ -46,12 +45,11 @@ export default function Home() {
           playsInline
           className="w-full h-full object-contain"
         >
-          <source src="/loge.mp4" type="video/mp4" />
+          <source src="/logo.mp4" type="video/mp4" />
         </video>
-
       </section>
 
-      {/* ================= PROJECTS ================= */}
+      {/* PROJECTS */}
       <motion.section
         id="games"
         initial="hidden"
@@ -66,8 +64,12 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
 
-          <div className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:border-indigo-500 hover:scale-105">
-            <div className="relative h-72 md:h-80 overflow-hidden">
+          {/* BCM */}
+          <a
+            href="https://bcm-game.com"
+            className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:border-indigo-500 hover:scale-105"
+          >
+            <div className="relative h-80 overflow-hidden">
               <Image
                 src="/bcm.jpg"
                 alt="BCM Screenshot"
@@ -81,10 +83,14 @@ export default function Home() {
                 전략과 데이터 기반 운영이 결합된 차세대 야구 시뮬레이션.
               </p>
             </div>
-          </div>
+          </a>
 
-          <div className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:border-pink-500 hover:scale-105">
-            <div className="relative h-72 md:h-80 overflow-hidden">
+          {/* Dear Idol */}
+          <a
+            href="https://dearidol.game"
+            className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:border-pink-500 hover:scale-105"
+          >
+            <div className="relative h-80 overflow-hidden">
               <Image
                 src="/idol.jpg"
                 alt="Dear Idol Visual"
@@ -98,7 +104,7 @@ export default function Home() {
                 감성과 전략이 만나는 아이돌 프로듀싱 프로젝트.
               </p>
             </div>
-          </div>
+          </a>
 
         </div>
       </motion.section>
@@ -120,19 +126,52 @@ export default function Home() {
         </p>
       </motion.section>
 
-      {/* CAREERS */}
+      {/* CAREERS (확장 구조) */}
       <motion.section
         id="careers"
         initial="hidden"
         whileInView="show"
         viewport={{ once: false }}
         variants={fadeUp}
-        className="py-40 px-6 border-t border-white/5 text-center"
+        className="py-40 px-6 border-t border-white/5"
       >
-        <h2 className="text-4xl font-bold mb-10">CAREERS</h2>
-        <p className="opacity-60 max-w-2xl mx-auto">
-          AROTECH와 함께 새로운 경험을 설계할 동료를 찾습니다.
-        </p>
+        <h2 className="text-4xl font-bold text-center mb-16">
+          CAREERS
+        </h2>
+
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-12 text-center">
+
+          {/* 채용 포지션 */}
+          <div className="bg-zinc-900 p-8 rounded-2xl border border-white/10">
+            <h3 className="text-xl font-semibold mb-4">채용 포지션</h3>
+            <ul className="opacity-60 space-y-2">
+              <li>Game Designer</li>
+              <li>Client Developer</li>
+              <li>UI/UX Designer</li>
+            </ul>
+          </div>
+
+          {/* 복지 */}
+          <div className="bg-zinc-900 p-8 rounded-2xl border border-white/10">
+            <h3 className="text-xl font-semibold mb-4">복지</h3>
+            <ul className="opacity-60 space-y-2">
+              <li>유연 근무제</li>
+              <li>자율 복장</li>
+              <li>성과 인센티브</li>
+            </ul>
+          </div>
+
+          {/* 팀 문화 */}
+          <div className="bg-zinc-900 p-8 rounded-2xl border border-white/10">
+            <h3 className="text-xl font-semibold mb-4">팀 문화</h3>
+            <ul className="opacity-60 space-y-2">
+              <li>자율적 의사결정</li>
+              <li>수평적 소통</li>
+              <li>빠른 실행</li>
+            </ul>
+          </div>
+
+        </div>
       </motion.section>
 
       {/* CONTACT */}
