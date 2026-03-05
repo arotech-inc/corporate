@@ -87,7 +87,9 @@ export default function Home() {
 
           {/* Dear Idol */}
           <a
-            href="https://dearidol.game"
+            href="https://dearidol.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:border-pink-500 hover:scale-105"
           >
             <div className="relative h-80 overflow-hidden">
