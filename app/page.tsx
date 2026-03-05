@@ -105,6 +105,21 @@ export default function Home() {
         <h2 className="text-5xl font-bold mb-20">
           OUR PROJECTS
         </h2>
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
+          <div className="bg-zinc-900 p-14 rounded-3xl border border-white/10 hover:border-indigo-500 transition">
+            <h3 className="text-4xl font-bold mb-6">BCM</h3>
+            <p className="opacity-60">
+              전략과 데이터 기반 운영이 결합된 야구 시뮬레이션.
+            </p>
+          </div>
+
+          <div className="bg-zinc-900 p-14 rounded-3xl border border-white/10 hover:border-pink-500 transition">
+            <h3 className="text-4xl font-bold mb-6">Dear Idol</h3>
+            <p className="opacity-60">
+              감성과 전략이 만나는 아이돌 프로듀싱 프로젝트.
+            </p>
+          </div>
+        </div>
       </motion.section>
 
       {/* VISION */}
