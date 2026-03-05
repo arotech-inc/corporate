@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import ParticlesBackground from "../components/ParticlesBackground";
 
 export default function Home() {
   const fadeUp = {
@@ -19,12 +18,11 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="relative bg-black text-white overflow-hidden"
+      className="bg-black text-white overflow-hidden"
     >
-      <ParticlesBackground />
 
-      {/* NAVBAR */}
-      <header className="fixed top-0 w-full backdrop-blur-xl bg-black/50 border-b border-white/5 z-50">
+      {/* ================= HEADER ================= */}
+      <header className="fixed top-0 w-full bg-black/70 backdrop-blur-lg border-b border-white/10 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="font-bold tracking-wide">AROTECH</h1>
           <nav className="hidden md:flex gap-8 text-sm text-white/70">
@@ -36,19 +34,20 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO */}
-      <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-black">
+      {/* ================= HERO ================= */}
+      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden pt-20">
+
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-contain"
+          className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/logo.mp4" type="video/mp4" />
         </video>
 
-                <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative z-10 text-center px-6">
           <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight">
@@ -58,16 +57,17 @@ export default function Home() {
             구조와 전략이 살아있는 게임을 설계하는 차세대 스튜디오
           </p>
         </div>
+
       </section>
 
-      {/* PROJECTS */}
+      {/* ================= PROJECTS ================= */}
       <motion.section
         id="games"
         initial="hidden"
         whileInView="show"
         viewport={{ once: false }}
         variants={fadeUp}
-        className="py-40 px-6 border-t border-white/5"
+        className="py-40 px-6 border-t border-white/10"
       >
         <h2 className="text-5xl font-bold text-center mb-24">
           OUR PROJECTS
@@ -78,6 +78,8 @@ export default function Home() {
           {/* BCM */}
           <a
             href="https://bcm-game.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:border-indigo-500 hover:scale-105"
           >
             <div className="relative h-80 overflow-hidden">
@@ -122,14 +124,14 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* VISION */}
+      {/* ================= VISION ================= */}
       <motion.section
         id="vision"
         initial="hidden"
         whileInView="show"
         viewport={{ once: false }}
         variants={fadeUp}
-        className="py-40 px-6 border-t border-white/5 text-center"
+        className="py-40 px-6 border-t border-white/10 text-center"
       >
         <h2 className="text-6xl font-extrabold mb-10">
           DESIGN. SYSTEM. EXPERIENCE.
@@ -139,62 +141,29 @@ export default function Home() {
         </p>
       </motion.section>
 
-      {/* CAREERS (확장 구조) */}
+      {/* ================= CAREERS ================= */}
       <motion.section
         id="careers"
         initial="hidden"
         whileInView="show"
         viewport={{ once: false }}
         variants={fadeUp}
-        className="py-40 px-6 border-t border-white/5"
+        className="py-40 px-6 border-t border-white/10 text-center"
       >
-        <h2 className="text-4xl font-bold text-center mb-16">
-          CAREERS
-        </h2>
-
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-12 text-center">
-
-          {/* 채용 포지션 */}
-          <div className="bg-zinc-900 p-8 rounded-2xl border border-white/10">
-            <h3 className="text-xl font-semibold mb-4">채용 포지션</h3>
-            <ul className="opacity-60 space-y-2">
-              <li>Game Designer</li>
-              <li>Client Developer</li>
-              <li>UI/UX Designer</li>
-            </ul>
-          </div>
-
-          {/* 복지 */}
-          <div className="bg-zinc-900 p-8 rounded-2xl border border-white/10">
-            <h3 className="text-xl font-semibold mb-4">복지</h3>
-            <ul className="opacity-60 space-y-2">
-              <li>유연 근무제</li>
-              <li>자율 복장</li>
-              <li>성과 인센티브</li>
-            </ul>
-          </div>
-
-          {/* 팀 문화 */}
-          <div className="bg-zinc-900 p-8 rounded-2xl border border-white/10">
-            <h3 className="text-xl font-semibold mb-4">팀 문화</h3>
-            <ul className="opacity-60 space-y-2">
-              <li>자율적 의사결정</li>
-              <li>수평적 소통</li>
-              <li>빠른 실행</li>
-            </ul>
-          </div>
-
-        </div>
+        <h2 className="text-4xl font-bold mb-10">CAREERS</h2>
+        <p className="opacity-60 max-w-2xl mx-auto">
+          AROTECH와 함께 새로운 경험을 설계할 동료를 찾습니다.
+        </p>
       </motion.section>
 
-      {/* CONTACT */}
+      {/* ================= CONTACT ================= */}
       <motion.section
         id="contact"
         initial="hidden"
         whileInView="show"
         viewport={{ once: false }}
         variants={fadeUp}
-        className="py-32 px-6 border-t border-white/5 text-center"
+        className="py-32 px-6 border-t border-white/10 text-center"
       >
         <h2 className="text-4xl font-bold mb-8">CONTACT</h2>
         <p className="opacity-60 mb-4">
