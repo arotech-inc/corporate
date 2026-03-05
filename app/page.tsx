@@ -47,6 +47,17 @@ export default function Home() {
         >
           <source src="/logo.mp4" type="video/mp4" />
         </video>
+
+                <div className="absolute inset-0 bg-black/60" />
+
+        <div className="relative z-10 text-center px-6">
+          <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight">
+            BUILD THE SYSTEM
+          </h1>
+          <p className="mt-6 opacity-70 max-w-xl mx-auto">
+            구조와 전략이 살아있는 게임을 설계하는 차세대 스튜디오
+          </p>
+        </div>
       </section>
 
       {/* PROJECTS */}
