@@ -22,7 +22,7 @@ export default function SiteFooter() {
 
         <div>
           <h4 className="font-bold text-base mb-4 text-white">Support</h4>
-          <p><a href="https://dearidol.vercel.app/customer-service" className="hover:text-white">고객지원</a></p>
+          <p><Link href="/support" className="hover:text-white">고객지원</Link></p>
           <p>contact@arotech.co.kr</p>
         </div>
 

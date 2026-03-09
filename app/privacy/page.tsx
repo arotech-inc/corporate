@@ -9,7 +9,7 @@ export default function PrivacyPage() {
   return (
     <main className="bg-black text-white min-h-screen">
 
-      <SiteHeader />
+      <SiteHeader showBack />
 
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 border-b border-white/10">
