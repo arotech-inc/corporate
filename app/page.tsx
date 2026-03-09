@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 export default function Home() {
   const fadeUp = {
@@ -21,18 +23,7 @@ export default function Home() {
       className="bg-black text-white overflow-hidden"
     >
 
-      {/* ================= HEADER ================= */}
-      <header className="fixed top-0 w-full bg-black/70 backdrop-blur-lg border-b border-white/10 z-50">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="font-bold tracking-wide">AROTECH</h1>
-          <nav className="hidden md:flex gap-8 text-sm text-white/70">
-            <a href="#games" className="hover:text-white transition">Games</a>
-            <a href="#vision" className="hover:text-white transition">Vision</a>
-            <a href="#careers" className="hover:text-white transition">Careers</a>
-            <a href="#contact" className="hover:text-white transition">Contact</a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* ================= HERO ================= */}
       <section className="relative h-screen w-full flex items-center justify-center overflow-hidden pt-20">
@@ -258,45 +249,7 @@ export default function Home() {
       </motion.section>
 
 
-          <div className="py-16 flex justify-center gap-8 text-sm text-white/40">
-            <a href="#games" className="hover:text-white transition">Games</a>
-            <a href="#vision" className="hover:text-white transition">Vision</a>
-            <a href="#careers" className="hover:text-white transition">Careers</a>
-            <a href="#contact" className="hover:text-white transition">Contact</a>
-          </div>
-
-          <footer className="py-20 border-t border-white/10 bg-black">
-
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-sm opacity-70">
-
-          <div>
-            <h4 className="font-semibold mb-4 text-white">Company</h4>
-            <p>주식회사 에이로테크</p>
-            <p>대표자: 김기영</p>
-            <p>사업자등록번호: 787-86-02754</p>
-            <p>통신판매업 신고번호: 제2025-서울구로-0000호</p>
-            <p>서울시 구로구 디지털로 34길 55</p>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4 text-white">Legal</h4>
-            <p><a href="/terms" className="hover:text-white">이용약관</a></p>
-            <p><a href="/privacy" className="hover:text-white">개인정보처리방침</a></p>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4 text-white">Support</h4>
-            <p><a href="https://dearidol.vercel.app/customer-service" className="hover:text-white">고객지원</a></p>
-            <p>contact@arotech.co.kr</p>
-          </div>
-
-        </div>
-
-        <p className="mt-16 text-center text-xs opacity-50">
-          © 2022 AROTECH. All rights reserved.
-        </p>
-
-      </footer>
+      <SiteFooter />
 
     </motion.main>
   );

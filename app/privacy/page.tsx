@@ -1,4 +1,5 @@
-import Link from "next/link";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 export const metadata = {
   title: "개인정보처리방침 | AROTECH",
@@ -8,17 +9,7 @@ export default function PrivacyPage() {
   return (
     <main className="bg-black text-white min-h-screen">
 
-      {/* Header */}
-      <header className="fixed top-0 w-full bg-black/70 backdrop-blur-lg border-b border-white/10 z-50">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/" className="font-bold tracking-wide hover:opacity-70 transition">
-            AROTECH
-          </Link>
-          <Link href="/" className="text-sm text-white/50 hover:text-white transition">
-            ← 홈으로
-          </Link>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 border-b border-white/10">
@@ -108,10 +99,7 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-6 border-t border-white/10 text-center text-xs text-white/30 mt-16">
-        © 2022 AROTECH. All rights reserved.
-      </footer>
+      <SiteFooter />
 
     </main>
   );
