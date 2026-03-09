@@ -165,14 +165,61 @@ export default function Home() {
         variants={fadeUp}
         className="py-32 px-6 border-t border-white/10 text-center"
       >
-        <h2 className="text-4xl font-bold mb-8">CONTACT</h2>
-        <p className="opacity-60 mb-4">
-          Business / Partnership 문의
-        </p>
-        <p className="text-lg font-semibold">
-          contact@arotech.co.kr
-        </p>
+        <h2 className="text-4xl font-bold mb-10">CONTACT</h2>
+        <div className="max-w-5xl mx-auto text-center mb-10">
+          <p className="opacity-70 mb-2">
+            서울시 구로구 디지털로 34길 55
+          </p>
+          <p className="opacity-70 mb-12">
+            contact@arotech.co.kr
+          </p>
+          <div className="rounded-2xl overflow-hidden border border-white/10">
+            <iframe
+              src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%EC%8B%9C+%EA%B5%AC%EB%A1%9C%EA%B5%AC+%EB%94%94%EC%A7%80%ED%84%B8%EB%A1%9C+34%EA%B8%B8+55&t=&z=17&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
       </motion.section>
+
+
+          <footer className="py-20 border-t border-white/10 bg-black">
+
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-sm opacity-70">
+
+          <div>
+            <h4 className="font-semibold mb-4 text-white">Company</h4>
+            <p>주식회사 에이로테크</p>
+            <p>대표자: 김기영</p>
+            <p>사업자등록번호: 787-86-02754</p>
+            <p>통신판매업 신고번호: 제2025-서울구로-0000호</p>
+            <p>서울시 구로구 디지털로 34길 55</p>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4 text-white">Legal</h4>
+            <p><a href="#" className="hover:text-white">이용약관</a></p>
+            <p><a href="#" className="hover:text-white">개인정보처리방침</a></p>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4 text-white">Support</h4>
+            <p><a href="https://dearidol.vercel.app/customer-service" className="hover:text-white">고객지원</a></p>
+            <p>contact@arotech.co.kr</p>
+          </div>
+
+        </div>
+
+        <p className="mt-16 text-center text-xs opacity-50">
+          © 2022 AROTECH. All rights reserved.
+        </p>
+
+      </footer>
 
     </motion.main>
   );
