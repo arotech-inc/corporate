@@ -148,12 +148,82 @@ export default function Home() {
         whileInView="show"
         viewport={{ once: false }}
         variants={fadeUp}
-        className="py-40 px-6 border-t border-white/10 text-center"
+        className="py-40 px-6 border-t border-white/10"
       >
-        <h2 className="text-4xl font-bold mb-10">CAREERS</h2>
-        <p className="opacity-60 max-w-2xl mx-auto">
-          AROTECH와 함께 새로운 경험을 설계할 동료를 찾습니다.
-        </p>
+        <div className="max-w-6xl mx-auto">
+
+          {/* Heading */}
+          <div className="text-center mb-24">
+            <h2 className="text-5xl font-bold mb-6">CAREERS</h2>
+            <p className="opacity-60 max-w-2xl mx-auto text-lg">
+              AROTECH와 함께 새로운 경험을 설계할 동료를 찾습니다.
+            </p>
+          </div>
+
+          {/* 채용 포지션 */}
+          <div className="mb-24">
+            <p className="text-xs tracking-widest text-white/40 uppercase mb-8">Open Positions</p>
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                { role: "Game Designer", type: "정규직", desc: "시스템 설계, 밸런싱, 콘텐츠 기획 전반을 담당합니다." },
+                { role: "Unity Developer", type: "정규직", desc: "게임 클라이언트 개발 및 최적화를 담당합니다." },
+                { role: "Backend Engineer", type: "정규직", desc: "서버 아키텍처 설계 및 API 개발을 담당합니다." },
+                { role: "2D Artist", type: "계약직 · 프리랜서", desc: "캐릭터, UI, 배경 아트워크 제작을 담당합니다." },
+              ].map(({ role, type, desc }) => (
+                <div
+                  key={role}
+                  className="group flex flex-col gap-3 bg-zinc-900 border border-white/10 rounded-2xl px-8 py-6 hover:border-white/30 transition duration-300"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-semibold">{role}</span>
+                    <span className="text-xs text-white/40 border border-white/10 rounded-full px-3 py-1">{type}</span>
+                  </div>
+                  <p className="text-white/50 text-sm">{desc}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-white/30 text-sm">
+              지원 문의: <a href="mailto:contact@arotech.co.kr" className="text-white/50 hover:text-white transition">contact@arotech.co.kr</a>
+            </p>
+          </div>
+
+          {/* 복지 */}
+          <div className="mb-24">
+            <p className="text-xs tracking-widest text-white/40 uppercase mb-8">Benefits</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { icon: "👕", label: "자율복장", desc: "복장 제한 없음" },
+                { icon: "🖥️", label: "장비 지원", desc: "고사양 개발 장비 제공" },
+                { icon: "🎁", label: "경조사비 지원", desc: "각종 경조사 지원" },
+                { icon: "🎮", label: "게임 지원", desc: "스팀·콘솔 게임 구매 지원" },
+              ].map(({ icon, label, desc }) => (
+                <div key={label} className="bg-zinc-900 border border-white/10 rounded-2xl px-6 py-6 text-center">
+                  <div className="text-3xl mb-3">{icon}</div>
+                  <p className="font-semibold text-sm mb-1">{label}</p>
+                  <p className="text-white/40 text-xs">{desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 팀 문화 */}
+          <div>
+            <p className="text-xs tracking-widest text-white/40 uppercase mb-8">Team Culture</p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { title: "자율적 의사결정", body: "각자의 영역에서 스스로 판단하고 실행합니다. 보고를 위한 보고는 없습니다." },
+                { title: "수평적 소통", body: "직급보다 논리가 먼저입니다. 누구나 의견을 내고, 최선의 답을 함께 찾습니다." },
+                { title: "직접 만들고 검증한다", body: "아이디어는 빠르게 프로토타입으로, 결과는 플레이어의 반응으로 검증합니다." },
+              ].map(({ title, body }) => (
+                <div key={title} className="border-l-2 border-white/20 pl-6 py-2">
+                  <h4 className="font-bold mb-3">{title}</h4>
+                  <p className="text-white/50 text-sm leading-relaxed">{body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
       </motion.section>
 
       {/* ================= CONTACT ================= */}
@@ -188,6 +258,13 @@ export default function Home() {
       </motion.section>
 
 
+          <div className="py-16 flex justify-center gap-8 text-sm text-white/40">
+            <a href="#games" className="hover:text-white transition">Games</a>
+            <a href="#vision" className="hover:text-white transition">Vision</a>
+            <a href="#careers" className="hover:text-white transition">Careers</a>
+            <a href="#contact" className="hover:text-white transition">Contact</a>
+          </div>
+
           <footer className="py-20 border-t border-white/10 bg-black">
 
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-sm opacity-70">
@@ -203,8 +280,8 @@ export default function Home() {
 
           <div>
             <h4 className="font-semibold mb-4 text-white">Legal</h4>
-            <p><a href="#" className="hover:text-white">이용약관</a></p>
-            <p><a href="#" className="hover:text-white">개인정보처리방침</a></p>
+            <p><a href="/terms" className="hover:text-white">이용약관</a></p>
+            <p><a href="/privacy" className="hover:text-white">개인정보처리방침</a></p>
           </div>
 
           <div>
