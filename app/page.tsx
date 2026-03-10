@@ -68,7 +68,7 @@ export default function Home() {
 
           {/* BCM */}
           <a
-            href="https://bcm-game.com"
+            href="https://bcm-lovat.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:border-indigo-500 hover:scale-105"
