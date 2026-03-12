@@ -171,7 +171,7 @@ export default function Home() {
             {[
               { value: "2022", label: "설립 연도" },
               { value: "2+", label: "진행 프로젝트" },
-              { value: "10+", label: "팀원" },
+              { value: "40+", label: "팀원" },
               { value: "∞", label: "가능성" },
             ].map(({ value, label }) => (
               <div key={label}>
@@ -269,7 +269,7 @@ export default function Home() {
           {/* 지원하기 버튼 */}
           <div className="text-center mt-20">
             <a
-              href="mailto:contact@arotech.co.kr?subject=%5B%EC%B1%84%EC%9A%A9%EC%A7%80%EC%9B%90%5D"
+              href="/apply"
               className="inline-block bg-white text-black font-bold text-lg px-12 py-4 rounded-full hover:bg-white/90 transition duration-200"
             >
               지원하기
