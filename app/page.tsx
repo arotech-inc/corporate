@@ -122,14 +122,66 @@ export default function Home() {
         whileInView="show"
         viewport={{ once: false }}
         variants={fadeUp}
-        className="py-40 px-6 border-t border-white/10 text-center"
+        className="py-40 px-6 border-t border-white/10"
       >
-        <h2 className="text-6xl font-extrabold mb-10">
-          DESIGN. SYSTEM. EXPERIENCE.
-        </h2>
-        <p className="max-w-3xl mx-auto opacity-60 text-lg">
-          우리는 구조적 완성도를 통해 오래 남는 게임을 만듭니다.
-        </p>
+        <div className="max-w-6xl mx-auto">
+
+          {/* Heading */}
+          <div className="text-center mb-24">
+            <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
+              DESIGN. SYSTEM. EXPERIENCE.
+            </h2>
+            <p className="max-w-3xl mx-auto opacity-60 text-lg">
+              우리는 구조적 완성도를 통해 오래 남는 게임을 만듭니다.
+            </p>
+          </div>
+
+          {/* 핵심 가치 카드 */}
+          <div className="grid md:grid-cols-3 gap-6 mb-20">
+            {[
+              {
+                num: "01",
+                title: "시스템 중심 설계",
+                desc: "직감이 아닌 구조와 데이터로 게임을 설계합니다. 반복 가능한 재미를 만드는 것이 우리의 기준입니다.",
+              },
+              {
+                num: "02",
+                title: "플레이어 경험 우선",
+                desc: "모든 기획과 개발의 출발점은 플레이어입니다. 유저가 몰입하는 순간을 끊임없이 연구합니다.",
+              },
+              {
+                num: "03",
+                title: "빠른 실행, 빠른 검증",
+                desc: "완벽한 기획서보다 빠른 프로토타입을 믿습니다. 만들고, 테스트하고, 개선하는 사이클을 반복합니다.",
+              },
+            ].map(({ num, title, desc }) => (
+              <div
+                key={num}
+                className="group bg-zinc-900 border border-white/10 rounded-2xl p-8 hover:border-white/25 transition duration-300"
+              >
+                <span className="text-xs tracking-widest text-white/30 font-mono">{num}</span>
+                <h3 className="text-xl font-bold mt-3 mb-4">{title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* 숫자 통계 */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { value: "2022", label: "설립 연도" },
+              { value: "2+", label: "진행 프로젝트" },
+              { value: "10+", label: "팀원" },
+              { value: "∞", label: "가능성" },
+            ].map(({ value, label }) => (
+              <div key={label}>
+                <p className="text-4xl md:text-5xl font-extrabold tracking-tight">{value}</p>
+                <p className="text-white/40 text-sm mt-2">{label}</p>
+              </div>
+            ))}
+          </div>
+
+        </div>
       </motion.section>
 
       {/* ================= CAREERS ================= */}
@@ -214,6 +266,16 @@ export default function Home() {
             </div>
           </div>
 
+          {/* 지원하기 버튼 */}
+          <div className="text-center mt-20">
+            <a
+              href="mailto:contact@arotech.co.kr?subject=%5B%EC%B1%84%EC%9A%A9%EC%A7%80%EC%9B%90%5D"
+              className="inline-block bg-white text-black font-bold text-lg px-12 py-4 rounded-full hover:bg-white/90 transition duration-200"
+            >
+              지원하기
+            </a>
+          </div>
+
         </div>
       </motion.section>
 
@@ -231,9 +293,15 @@ export default function Home() {
           <p className="opacity-70 mb-2">
             서울시 구로구 디지털로 34길 55
           </p>
-          <p className="opacity-70 mb-12">
+          <p className="opacity-70 mb-10">
             contact@arotech.co.kr
           </p>
+          <a
+            href="/support"
+            className="inline-block bg-white text-black font-bold px-10 py-3 rounded-full hover:bg-white/90 transition duration-200 mb-12"
+          >
+            문의하기
+          </a>
           <div className="rounded-2xl overflow-hidden border border-white/10">
             <iframe
               src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%EC%8B%9C+%EA%B5%AC%EB%A1%9C%EA%B5%AC+%EB%94%94%EC%A7%80%ED%84%B8%EB%A1%9C+34%EA%B8%B8+55&t=&z=17&ie=UTF8&iwloc=&output=embed"
