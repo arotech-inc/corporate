@@ -122,14 +122,16 @@ export default function Home() {
         whileInView="show"
         viewport={{ once: false }}
         variants={fadeUp}
-        className="py-40 px-6 border-t border-white/10 text-center"
+        className="py-40 px-6 border-t border-white/10"
       >
-        <h2 className="text-6xl font-extrabold mb-6">
-          DESIGN. SYSTEM. EXPERIENCE.
-        </h2>
-        <p className="max-w-3xl mx-auto opacity-60 text-lg mb-20">
-          우리는 구조적 완성도를 통해 오래 남는 게임을 만듭니다.
-        </p>
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
+            DESIGN. SYSTEM. EXPERIENCE.
+          </h2>
+          <p className="max-w-3xl mx-auto opacity-60 text-lg">
+            우리는 구조적 완성도를 통해 오래 남는 게임을 만듭니다.
+          </p>
+        </div>
 
         {/* 3 Vision Cards */}
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-5 mb-20 text-left">
@@ -216,7 +218,7 @@ export default function Home() {
         </div>
 
         {/* Stats Row */}
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-16 text-center">
 
           <div className="flex flex-col items-center gap-3">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style={{ filter: "drop-shadow(0 0 6px #f59e0b)" }}>
@@ -346,6 +348,16 @@ export default function Home() {
             </div>
           </div>
 
+          {/* 지원하기 버튼 */}
+          <div className="text-center mt-20">
+            <a
+              href="/apply"
+              className="inline-block bg-white text-black font-bold text-lg px-12 py-4 rounded-full hover:bg-white/90 transition duration-200"
+            >
+              지원하기
+            </a>
+          </div>
+
         </div>
       </motion.section>
 
@@ -363,9 +375,15 @@ export default function Home() {
           <p className="opacity-70 mb-2">
             서울시 구로구 디지털로 34길 55
           </p>
-          <p className="opacity-70 mb-12">
+          <p className="opacity-70 mb-10">
             contact@arotech.co.kr
           </p>
+          <a
+            href="/support"
+            className="inline-block bg-white text-black font-bold px-10 py-3 rounded-full hover:bg-white/90 transition duration-200 mb-12"
+          >
+            문의하기
+          </a>
           <div className="rounded-2xl overflow-hidden border border-white/10">
             <iframe
               src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%EC%8B%9C+%EA%B5%AC%EB%A1%9C%EA%B5%AC+%EB%94%94%EC%A7%80%ED%84%B8%EB%A1%9C+34%EA%B8%B8+55&t=&z=17&ie=UTF8&iwloc=&output=embed"
