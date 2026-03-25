@@ -128,15 +128,14 @@ export default function Home() {
           <Image
             src="/vision_title.jpg"
             alt="Vision background"
-            width={5728}
-            height={736}
-            className="w-full object-cover"
+            fill
+            className="object-cover"
           />
-          <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <h2 className="text-5xl md:text-6xl font-extrabold mb-6 text-center">
+          <div className="relative z-10 flex flex-col items-center justify-center py-16 px-6">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-center">
               DESIGN. SYSTEM. EXPERIENCE.
             </h2>
-            <p className="max-w-3xl mx-auto opacity-60 text-lg text-center">
+            <p className="max-w-3xl mx-auto opacity-60 text-base md:text-lg text-center">
               우리는 구조적 완성도를 통해 오래 남는 게임을 만듭니다.
             </p>
           </div>
