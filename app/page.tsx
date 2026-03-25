@@ -126,7 +126,7 @@ export default function Home() {
       >
         <div className="relative w-full mb-20 overflow-hidden rounded-2xl">
           <Image
-            src="/vision_title.jpg"
+            src="/vision_title2.jpg"
             alt="Vision background"
             fill
             className="object-cover"
