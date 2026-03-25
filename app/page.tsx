@@ -135,7 +135,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-center">
               DESIGN. SYSTEM. EXPERIENCE.
             </h2>
-            <p className="max-w-3xl mx-auto opacity-60 text-base md:text-lg text-center">
+            <p className="max-w-3xl mx-auto opacity-60 text-[3vw] sm:text-sm md:text-lg text-center whitespace-nowrap">
               우리는 구조적 완성도를 통해 오래 남는 게임을 만듭니다.
             </p>
           </div>
