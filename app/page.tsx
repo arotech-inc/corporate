@@ -124,12 +124,144 @@ export default function Home() {
         variants={fadeUp}
         className="py-40 px-6 border-t border-white/10 text-center"
       >
-        <h2 className="text-6xl font-extrabold mb-10">
+        <h2 className="text-6xl font-extrabold mb-6">
           DESIGN. SYSTEM. EXPERIENCE.
         </h2>
-        <p className="max-w-3xl mx-auto opacity-60 text-lg">
+        <p className="max-w-3xl mx-auto opacity-60 text-lg mb-20">
           우리는 구조적 완성도를 통해 오래 남는 게임을 만듭니다.
         </p>
+
+        {/* 3 Vision Cards */}
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-5 mb-20 text-left">
+
+          {/* Card 01 */}
+          <div className="relative bg-zinc-900/80 border border-white/10 rounded-2xl p-8 overflow-hidden">
+            <span className="text-white/30 text-xs tracking-widest block mb-6">01</span>
+            <div className="absolute top-6 right-6">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style={{ filter: "drop-shadow(0 0 12px #38bdf8)" }}>
+                <rect x="28" y="28" width="24" height="24" rx="3" stroke="#38bdf8" strokeWidth="1.5"/>
+                <line x1="40" y1="10" x2="40" y2="28" stroke="#38bdf8" strokeWidth="1.5"/>
+                <line x1="40" y1="52" x2="40" y2="70" stroke="#38bdf8" strokeWidth="1.5"/>
+                <line x1="10" y1="40" x2="28" y2="40" stroke="#38bdf8" strokeWidth="1.5"/>
+                <line x1="52" y1="40" x2="70" y2="40" stroke="#38bdf8" strokeWidth="1.5"/>
+                <circle cx="40" cy="10" r="3" fill="#38bdf8"/>
+                <circle cx="40" cy="70" r="3" fill="#38bdf8"/>
+                <circle cx="10" cy="40" r="3" fill="#38bdf8"/>
+                <circle cx="70" cy="40" r="3" fill="#38bdf8"/>
+                <line x1="28" y1="28" x2="15" y2="15" stroke="#38bdf8" strokeWidth="1" strokeOpacity="0.5"/>
+                <line x1="52" y1="28" x2="65" y2="15" stroke="#38bdf8" strokeWidth="1" strokeOpacity="0.5"/>
+                <line x1="28" y1="52" x2="15" y2="65" stroke="#38bdf8" strokeWidth="1" strokeOpacity="0.5"/>
+                <line x1="52" y1="52" x2="65" y2="65" stroke="#38bdf8" strokeWidth="1" strokeOpacity="0.5"/>
+                <circle cx="15" cy="15" r="2.5" fill="#38bdf8" fillOpacity="0.6"/>
+                <circle cx="65" cy="15" r="2.5" fill="#38bdf8" fillOpacity="0.6"/>
+                <circle cx="15" cy="65" r="2.5" fill="#38bdf8" fillOpacity="0.6"/>
+                <circle cx="65" cy="65" r="2.5" fill="#38bdf8" fillOpacity="0.6"/>
+                <rect x="34" y="34" width="12" height="12" rx="2" fill="#38bdf8" fillOpacity="0.2" stroke="#38bdf8" strokeWidth="1"/>
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold mb-3 pr-20">시스템 중심 설계</h3>
+            <p className="text-white/50 text-sm leading-relaxed">
+              직감이 아닌 구조와 데이터로 게임을 설계합니다.<br />
+              반복 가능한 재미를 만드는 것이 우리의 기준입니다.
+            </p>
+          </div>
+
+          {/* Card 02 */}
+          <div className="relative bg-zinc-900/80 border border-white/10 rounded-2xl p-8 overflow-hidden">
+            <span className="text-white/30 text-xs tracking-widest block mb-6">02</span>
+            <div className="absolute top-6 right-6">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style={{ filter: "drop-shadow(0 0 12px #f59e0b)" }}>
+                <circle cx="40" cy="28" r="10" stroke="#f59e0b" strokeWidth="1.5"/>
+                <path d="M22 62 C22 50 58 50 58 62" stroke="#f59e0b" strokeWidth="1.5" strokeLinecap="round"/>
+                <rect x="30" y="24" width="20" height="8" rx="4" stroke="#f59e0b" strokeWidth="1.5" fill="none"/>
+                <line x1="12" y1="28" x2="22" y2="32" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.5"/>
+                <line x1="68" y1="28" x2="58" y2="32" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.5"/>
+                <line x1="16" y1="50" x2="26" y2="48" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.5"/>
+                <line x1="64" y1="50" x2="54" y2="48" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.5"/>
+                <circle cx="12" cy="28" r="2.5" fill="#f59e0b" fillOpacity="0.7"/>
+                <circle cx="68" cy="28" r="2.5" fill="#f59e0b" fillOpacity="0.7"/>
+                <circle cx="16" cy="50" r="2.5" fill="#f59e0b" fillOpacity="0.5"/>
+                <circle cx="64" cy="50" r="2.5" fill="#f59e0b" fillOpacity="0.5"/>
+                <circle cx="40" cy="14" r="2" fill="#f59e0b" fillOpacity="0.8"/>
+                <line x1="40" y1="12" x2="40" y2="6" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.5"/>
+                <circle cx="40" cy="5" r="1.5" fill="#f59e0b" fillOpacity="0.4"/>
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold mb-3 pr-20">플레이어 경험 우선</h3>
+            <p className="text-white/50 text-sm leading-relaxed">
+              모든 기획과 개발의 출발점은 플레이어입니다.<br />
+              유저가 몰입하는 순간을 끊임없이 연구합니다.
+            </p>
+          </div>
+
+          {/* Card 03 */}
+          <div className="relative bg-zinc-900/80 border border-white/10 rounded-2xl p-8 overflow-hidden">
+            <span className="text-white/30 text-xs tracking-widest block mb-6">03</span>
+            <div className="absolute top-6 right-6">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style={{ filter: "drop-shadow(0 0 12px #a78bfa)" }}>
+                <circle cx="28" cy="40" r="16" stroke="#a78bfa" strokeWidth="1.5"/>
+                <polygon points="23,33 23,47 35,40" fill="#a78bfa" fillOpacity="0.8"/>
+                <path d="M52 24 A18 18 0 0 1 52 56" stroke="#a78bfa" strokeWidth="1.5" strokeLinecap="round"/>
+                <path d="M58 18 L52 24 L60 28" stroke="#a78bfa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                <path d="M58 62 L52 56 L60 52" stroke="#a78bfa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold mb-3 pr-20">빠른 실행, 빠른 검증</h3>
+            <p className="text-white/50 text-sm leading-relaxed">
+              완벽한 기획보다 빠른 프로토타입을 믿습니다.<br />
+              만들고, 테스트하고, 개선하는 사이클을 반복합니다.
+            </p>
+          </div>
+
+        </div>
+
+        {/* Stats Row */}
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-16">
+
+          <div className="flex flex-col items-center gap-3">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style={{ filter: "drop-shadow(0 0 6px #f59e0b)" }}>
+              <path d="M20 4 L36 13 L36 27 L20 36 L4 27 L4 13 Z" stroke="#f59e0b" strokeWidth="1.5" fill="none"/>
+              <path d="M20 4 L20 36" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.4"/>
+              <path d="M4 13 L36 13" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.4"/>
+              <path d="M4 27 L36 27" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.4"/>
+            </svg>
+            <p className="text-5xl font-extrabold">2022</p>
+            <p className="text-white/40 text-sm">설립 연도</p>
+          </div>
+
+          <div className="flex flex-col items-center gap-3">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style={{ filter: "drop-shadow(0 0 6px #f59e0b)" }}>
+              <circle cx="20" cy="20" r="6" stroke="#f59e0b" strokeWidth="1.5"/>
+              <path d="M20 4 L20 8 M20 32 L20 36 M4 20 L8 20 M32 20 L36 20" stroke="#f59e0b" strokeWidth="1.5" strokeLinecap="round"/>
+              <path d="M8.7 8.7 L11.5 11.5 M28.5 28.5 L31.3 31.3 M8.7 31.3 L11.5 28.5 M28.5 11.5 L31.3 8.7" stroke="#f59e0b" strokeWidth="1.5" strokeLinecap="round"/>
+            </svg>
+            <p className="text-5xl font-extrabold">2+</p>
+            <p className="text-white/40 text-sm">진행 프로젝트</p>
+          </div>
+
+          <div className="flex flex-col items-center gap-3">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style={{ filter: "drop-shadow(0 0 6px #f59e0b)" }}>
+              <circle cx="20" cy="13" r="5" stroke="#f59e0b" strokeWidth="1.5"/>
+              <path d="M8 34 C8 25 32 25 32 34" stroke="#f59e0b" strokeWidth="1.5" strokeLinecap="round"/>
+              <circle cx="10" cy="14" r="3.5" stroke="#f59e0b" strokeWidth="1.2" strokeOpacity="0.6"/>
+              <circle cx="30" cy="14" r="3.5" stroke="#f59e0b" strokeWidth="1.2" strokeOpacity="0.6"/>
+              <path d="M2 32 C2 26 10 24 10 24" stroke="#f59e0b" strokeWidth="1.2" strokeLinecap="round" strokeOpacity="0.6"/>
+              <path d="M38 32 C38 26 30 24 30 24" stroke="#f59e0b" strokeWidth="1.2" strokeLinecap="round" strokeOpacity="0.6"/>
+            </svg>
+            <p className="text-5xl font-extrabold">40+</p>
+            <p className="text-white/40 text-sm">팀원</p>
+          </div>
+
+          <div className="flex flex-col items-center gap-3">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style={{ filter: "drop-shadow(0 0 8px #a78bfa)" }}>
+              <path d="M5 20 C5 14 10 10 15 10 C18 10 21 12 23 15 C25 18 27 22 29 24 C31 26 33 28 35 28 C38 28 38 24 35 20 C33 17 30 16 27 18" stroke="#a78bfa" strokeWidth="2" strokeLinecap="round" fill="none"/>
+              <path d="M35 20 C35 14 30 10 25 10 C22 10 19 12 17 15 C15 18 13 22 11 24 C9 26 7 28 5 28 C2 28 2 24 5 20 C7 17 10 16 13 18" stroke="#a78bfa" strokeWidth="2" strokeLinecap="round" fill="none"/>
+            </svg>
+            <p className="text-5xl font-extrabold">∞</p>
+            <p className="text-white/40 text-sm">가능성</p>
+          </div>
+
+        </div>
       </motion.section>
 
       {/* ================= CAREERS ================= */}
