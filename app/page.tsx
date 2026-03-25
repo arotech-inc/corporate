@@ -124,13 +124,22 @@ export default function Home() {
         variants={fadeUp}
         className="py-40 px-6 border-t border-white/10"
       >
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
-            DESIGN. SYSTEM. EXPERIENCE.
-          </h2>
-          <p className="max-w-3xl mx-auto opacity-60 text-lg">
-            우리는 구조적 완성도를 통해 오래 남는 게임을 만듭니다.
-          </p>
+        <div className="relative w-full mb-20 overflow-hidden rounded-2xl">
+          <Image
+            src="/vision_title.jpg"
+            alt="Vision background"
+            width={5728}
+            height={736}
+            className="w-full object-cover"
+          />
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <h2 className="text-5xl md:text-6xl font-extrabold mb-6 text-center">
+              DESIGN. SYSTEM. EXPERIENCE.
+            </h2>
+            <p className="max-w-3xl mx-auto opacity-60 text-lg text-center">
+              우리는 구조적 완성도를 통해 오래 남는 게임을 만듭니다.
+            </p>
+          </div>
         </div>
 
         {/* 3 Vision Cards */}
