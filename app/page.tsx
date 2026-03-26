@@ -128,15 +128,14 @@ export default function Home() {
         variants={fadeUp}
         className="py-40 px-6 border-t border-white/10"
       >
-        <div className="relative w-full mb-20 overflow-hidden rounded-2xl max-h-[320px] md:max-h-[480px]">
+        <div className="relative w-full mb-20 overflow-hidden rounded-2xl" style={{ aspectRatio: "3200 / 1177" }}>
           <Image
             src="/vision_title2.jpg"
             alt="AROTECH 비전 - Design, System, Experience"
-            width={3200}
-            height={1312}
+            fill
             sizes="100vw"
             quality={80}
-            className="w-full h-full object-cover"
+            className="object-contain"
           />
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-center">
