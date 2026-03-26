@@ -128,7 +128,7 @@ export default function Home() {
         variants={fadeUp}
         className="py-40 px-6 border-t border-white/10"
       >
-        <div className="relative w-full mb-20 overflow-hidden rounded-2xl max-h-[300px] md:max-h-[450px]">
+        <div className="relative w-full mb-20 overflow-hidden rounded-2xl max-h-[320px] md:max-h-[480px]">
           <Image
             src="/vision_title2.jpg"
             alt="AROTECH 비전 - Design, System, Experience"
@@ -399,19 +399,21 @@ export default function Home() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl px-10 py-10 flex flex-col justify-center gap-5 text-center md:text-left">
-            <p className="text-white/80">
-              서울시 구로구 디지털로 34길 55
-            </p>
-            <p className="text-white/80">
-              contact@arotech.co.kr
-            </p>
-            <a
-              href="/support"
-              className="inline-block bg-white text-black font-bold px-10 py-3 rounded-full hover:bg-white/90 transition duration-200 mt-2 w-fit mx-auto md:mx-0"
-            >
-              문의하기
-            </a>
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl px-10 py-10 flex items-center justify-center">
+            <div className="flex flex-col gap-5 text-left">
+              <p className="text-white/80">
+                서울시 구로구 디지털로 34길 55
+              </p>
+              <p className="text-white/80">
+                contact@arotech.co.kr
+              </p>
+              <a
+                href="/support"
+                className="inline-block bg-white text-black font-bold px-10 py-3 rounded-full hover:bg-white/90 transition duration-200 mt-2 w-fit"
+              >
+                문의하기
+              </a>
+            </div>
           </div>
         </div>
       </motion.section>
