@@ -33,7 +33,7 @@ export default function SiteHeader({ showBack = false }: { showBack?: boolean })
             {/* Desktop nav */}
             <nav className="hidden md:flex gap-10 text-base text-white/70">
               {navLinks.map(({ href, label }) => (
-                <Link key={label} href={href} className="hover:text-white transition">{label}</Link>
+                <a key={label} href={href} className="hover:text-white transition">{label}</a>
               ))}
             </nav>
 
@@ -55,14 +55,14 @@ export default function SiteHeader({ showBack = false }: { showBack?: boolean })
       {!showBack && menuOpen && (
         <nav className="md:hidden bg-black/95 backdrop-blur-lg border-t border-white/10 px-8 py-6 flex flex-col gap-6 text-lg">
           {navLinks.map(({ href, label }) => (
-            <Link
+            <a
               key={label}
               href={href}
               onClick={() => setMenuOpen(false)}
               className="text-white/70 hover:text-white transition"
             >
               {label}
-            </Link>
+            </a>
           ))}
         </nav>
       )}
