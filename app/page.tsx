@@ -128,7 +128,7 @@ export default function Home() {
         variants={fadeUp}
         className="py-40 px-6 border-t border-white/10"
       >
-        <div className="relative w-full mb-20 overflow-hidden rounded-2xl max-h-[250px] md:max-h-[350px]">
+        <div className="relative w-full mb-20 overflow-hidden rounded-2xl max-h-[300px] md:max-h-[450px]">
           <Image
             src="/vision_title2.jpg"
             alt="AROTECH 비전 - Design, System, Experience"
@@ -386,27 +386,29 @@ export default function Home() {
         className="py-32 px-6 border-t border-white/10 text-center"
       >
         <h2 className="text-4xl font-bold mb-10">CONTACT</h2>
-        <div className="relative max-w-5xl mx-auto rounded-2xl overflow-hidden border border-white/10">
-          <iframe
-            title="AROTECH 오피스 위치"
-            src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%EC%8B%9C+%EA%B5%AC%EB%A1%9C%EA%B5%AC+%EB%94%94%EC%A7%80%ED%84%B8%EB%A1%9C+34%EA%B8%B8+55&t=&z=17&ie=UTF8&iwloc=&output=embed"
-            width="100%"
-            height="350"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-          <div className="md:absolute md:bottom-6 md:right-6 bg-black/70 backdrop-blur-md border border-white/10 rounded-2xl px-8 py-6 flex flex-col gap-3 text-left">
-            <p className="text-white/80 text-sm">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-stretch">
+          <div className="rounded-2xl overflow-hidden border border-white/10">
+            <iframe
+              title="AROTECH 오피스 위치"
+              src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%EC%8B%9C+%EA%B5%AC%EB%A1%9C%EA%B5%AC+%EB%94%94%EC%A7%80%ED%84%B8%EB%A1%9C+34%EA%B8%B8+55&t=&z=17&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: 280 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl px-10 py-10 flex flex-col justify-center gap-5 text-center md:text-left">
+            <p className="text-white/80">
               서울시 구로구 디지털로 34길 55
             </p>
-            <p className="text-white/80 text-sm">
+            <p className="text-white/80">
               contact@arotech.co.kr
             </p>
             <a
               href="/support"
-              className="inline-block bg-white text-black font-bold text-sm px-8 py-2.5 rounded-full hover:bg-white/90 transition duration-200 mt-2 text-center"
+              className="inline-block bg-white text-black font-bold px-10 py-3 rounded-full hover:bg-white/90 transition duration-200 mt-2 w-fit mx-auto md:mx-0"
             >
               문의하기
             </a>
