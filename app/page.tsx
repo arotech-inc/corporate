@@ -154,26 +154,7 @@ export default function Home() {
           <div className="relative bg-zinc-900/80 border border-white/10 rounded-2xl p-8 overflow-hidden">
             <span className="text-white/30 text-xs tracking-widest block mb-6">01</span>
             <div className="absolute top-6 right-6">
-              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style={{ filter: "drop-shadow(0 0 12px #38bdf8)" }}>
-                <rect x="28" y="28" width="24" height="24" rx="3" stroke="#38bdf8" strokeWidth="1.5"/>
-                <line x1="40" y1="10" x2="40" y2="28" stroke="#38bdf8" strokeWidth="1.5"/>
-                <line x1="40" y1="52" x2="40" y2="70" stroke="#38bdf8" strokeWidth="1.5"/>
-                <line x1="10" y1="40" x2="28" y2="40" stroke="#38bdf8" strokeWidth="1.5"/>
-                <line x1="52" y1="40" x2="70" y2="40" stroke="#38bdf8" strokeWidth="1.5"/>
-                <circle cx="40" cy="10" r="3" fill="#38bdf8"/>
-                <circle cx="40" cy="70" r="3" fill="#38bdf8"/>
-                <circle cx="10" cy="40" r="3" fill="#38bdf8"/>
-                <circle cx="70" cy="40" r="3" fill="#38bdf8"/>
-                <line x1="28" y1="28" x2="15" y2="15" stroke="#38bdf8" strokeWidth="1" strokeOpacity="0.5"/>
-                <line x1="52" y1="28" x2="65" y2="15" stroke="#38bdf8" strokeWidth="1" strokeOpacity="0.5"/>
-                <line x1="28" y1="52" x2="15" y2="65" stroke="#38bdf8" strokeWidth="1" strokeOpacity="0.5"/>
-                <line x1="52" y1="52" x2="65" y2="65" stroke="#38bdf8" strokeWidth="1" strokeOpacity="0.5"/>
-                <circle cx="15" cy="15" r="2.5" fill="#38bdf8" fillOpacity="0.6"/>
-                <circle cx="65" cy="15" r="2.5" fill="#38bdf8" fillOpacity="0.6"/>
-                <circle cx="15" cy="65" r="2.5" fill="#38bdf8" fillOpacity="0.6"/>
-                <circle cx="65" cy="65" r="2.5" fill="#38bdf8" fillOpacity="0.6"/>
-                <rect x="34" y="34" width="12" height="12" rx="2" fill="#38bdf8" fillOpacity="0.2" stroke="#38bdf8" strokeWidth="1"/>
-              </svg>
+              <Image src="/vision_icon1.png" alt="시스템 중심 설계" width={80} height={80} />
             </div>
             <h3 className="text-xl font-bold mb-3 pr-20">시스템 중심 설계</h3>
             <p className="text-white/50 text-sm leading-relaxed">
@@ -186,22 +167,7 @@ export default function Home() {
           <div className="relative bg-zinc-900/80 border border-white/10 rounded-2xl p-8 overflow-hidden">
             <span className="text-white/30 text-xs tracking-widest block mb-6">02</span>
             <div className="absolute top-6 right-6">
-              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style={{ filter: "drop-shadow(0 0 12px #f59e0b)" }}>
-                <circle cx="40" cy="28" r="10" stroke="#f59e0b" strokeWidth="1.5"/>
-                <path d="M22 62 C22 50 58 50 58 62" stroke="#f59e0b" strokeWidth="1.5" strokeLinecap="round"/>
-                <rect x="30" y="24" width="20" height="8" rx="4" stroke="#f59e0b" strokeWidth="1.5" fill="none"/>
-                <line x1="12" y1="28" x2="22" y2="32" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.5"/>
-                <line x1="68" y1="28" x2="58" y2="32" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.5"/>
-                <line x1="16" y1="50" x2="26" y2="48" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.5"/>
-                <line x1="64" y1="50" x2="54" y2="48" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.5"/>
-                <circle cx="12" cy="28" r="2.5" fill="#f59e0b" fillOpacity="0.7"/>
-                <circle cx="68" cy="28" r="2.5" fill="#f59e0b" fillOpacity="0.7"/>
-                <circle cx="16" cy="50" r="2.5" fill="#f59e0b" fillOpacity="0.5"/>
-                <circle cx="64" cy="50" r="2.5" fill="#f59e0b" fillOpacity="0.5"/>
-                <circle cx="40" cy="14" r="2" fill="#f59e0b" fillOpacity="0.8"/>
-                <line x1="40" y1="12" x2="40" y2="6" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.5"/>
-                <circle cx="40" cy="5" r="1.5" fill="#f59e0b" fillOpacity="0.4"/>
-              </svg>
+              <Image src="/vision_icon2.png" alt="플레이어 경험 우선" width={80} height={80} />
             </div>
             <h3 className="text-xl font-bold mb-3 pr-20">플레이어 경험 우선</h3>
             <p className="text-white/50 text-sm leading-relaxed">
@@ -214,13 +180,7 @@ export default function Home() {
           <div className="relative bg-zinc-900/80 border border-white/10 rounded-2xl p-8 overflow-hidden">
             <span className="text-white/30 text-xs tracking-widest block mb-6">03</span>
             <div className="absolute top-6 right-6">
-              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style={{ filter: "drop-shadow(0 0 12px #a78bfa)" }}>
-                <circle cx="28" cy="40" r="16" stroke="#a78bfa" strokeWidth="1.5"/>
-                <polygon points="23,33 23,47 35,40" fill="#a78bfa" fillOpacity="0.8"/>
-                <path d="M52 24 A18 18 0 0 1 52 56" stroke="#a78bfa" strokeWidth="1.5" strokeLinecap="round"/>
-                <path d="M58 18 L52 24 L60 28" stroke="#a78bfa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                <path d="M58 62 L52 56 L60 52" stroke="#a78bfa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-              </svg>
+              <Image src="/vision_icon3.png" alt="빠른 실행, 빠른 검증" width={80} height={80} />
             </div>
             <h3 className="text-xl font-bold mb-3 pr-20">빠른 실행, 빠른 검증</h3>
             <p className="text-white/50 text-sm leading-relaxed">
