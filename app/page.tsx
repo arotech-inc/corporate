@@ -33,7 +33,7 @@ export default function Home() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain md:object-cover"
         >
           <source src="/logo.mp4" type="video/mp4" />
         </video>
@@ -73,11 +73,13 @@ export default function Home() {
             rel="noopener noreferrer"
             className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:border-indigo-500 hover:scale-105"
           >
-            <div className="relative h-80 overflow-hidden">
+            <div className="relative h-48 md:h-64 lg:h-80 overflow-hidden">
               <Image
-                src="/bcm.jpg"
+                src="/bcm.png"
                 alt="BCM Screenshot"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={85}
                 className="object-cover transition duration-700 group-hover:scale-110"
               />
             </div>
@@ -96,11 +98,13 @@ export default function Home() {
             rel="noopener noreferrer"
             className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:border-pink-500 hover:scale-105"
           >
-            <div className="relative h-80 overflow-hidden">
+            <div className="relative h-48 md:h-64 lg:h-80 overflow-hidden">
               <Image
                 src="/idol.jpg"
                 alt="Dear Idol Visual"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={85}
                 className="object-cover transition duration-700 group-hover:scale-110"
               />
             </div>
@@ -127,8 +131,10 @@ export default function Home() {
         <div className="relative w-full mb-20 overflow-hidden rounded-2xl">
           <Image
             src="/vision_title2.jpg"
-            alt="Vision background"
+            alt="AROTECH 비전 - Design, System, Experience"
             fill
+            sizes="100vw"
+            quality={80}
             className="object-cover"
           />
           <div className="relative z-10 flex flex-col items-center justify-center py-16 px-6">
@@ -394,6 +400,7 @@ export default function Home() {
           </a>
           <div className="rounded-2xl overflow-hidden border border-white/10">
             <iframe
+              title="AROTECH 오피스 위치"
               src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%EC%8B%9C+%EA%B5%AC%EB%A1%9C%EA%B5%AC+%EB%94%94%EC%A7%80%ED%84%B8%EB%A1%9C+34%EA%B8%B8+55&t=&z=17&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="400"
