@@ -230,8 +230,7 @@ export default function Home() {
 
           <div className="flex flex-col items-center gap-3">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style={{ filter: "drop-shadow(0 0 8px #a78bfa)" }}>
-              <path d="M5 20 C5 14 10 10 15 10 C18 10 21 12 23 15 C25 18 27 22 29 24 C31 26 33 28 35 28 C38 28 38 24 35 20 C33 17 30 16 27 18" stroke="#a78bfa" strokeWidth="2" strokeLinecap="round" fill="none"/>
-              <path d="M35 20 C35 14 30 10 25 10 C22 10 19 12 17 15 C15 18 13 22 11 24 C9 26 7 28 5 28 C2 28 2 24 5 20 C7 17 10 16 13 18" stroke="#a78bfa" strokeWidth="2" strokeLinecap="round" fill="none"/>
+              <path d="M12 20 C12 15 15 12 18 12 C21 12 23 15 20 20 C17 25 19 28 22 28 C25 28 28 25 28 20 C28 15 25 12 22 12 C19 12 17 15 20 20 C23 25 21 28 18 28 C15 28 12 25 12 20 Z" stroke="#a78bfa" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
             </svg>
             <p className="text-5xl font-extrabold">∞</p>
             <p className="text-white/40 text-sm">가능성</p>
