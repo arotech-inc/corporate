@@ -26,25 +26,25 @@ export default function Home() {
       <SiteHeader />
 
       {/* ================= HERO ================= */}
-      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden pt-20">
 
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-contain md:object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/logo.mp4" type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-black/60" />
 
-        <div className="relative z-10 text-center px-6">
-          <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight">
+        <div className="relative z-10 text-center px-6 mt-[40vh] md:mt-0">
+          <h1 className="text-5xl md:text-8xl font-extrabold tracking-tight">
             BUILD THE SYSTEM
           </h1>
-          <p className="mt-6 opacity-70 max-w-xl mx-auto">
+          <p className="mt-4 md:mt-6 opacity-70 max-w-xl mx-auto text-sm md:text-base">
             구조와 전략이 살아있는 게임을 설계하는 차세대 스튜디오
           </p>
         </div>
@@ -132,12 +132,13 @@ export default function Home() {
           <Image
             src="/vision_title2.jpg"
             alt="AROTECH 비전 - Design, System, Experience"
-            fill
+            width={3200}
+            height={1312}
             sizes="100vw"
             quality={80}
-            className="object-cover"
+            className="w-full h-auto"
           />
-          <div className="relative z-10 flex flex-col items-center justify-center py-16 px-6">
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-center">
               DESIGN. SYSTEM. EXPERIENCE.
             </h2>
@@ -385,30 +386,32 @@ export default function Home() {
         className="py-32 px-6 border-t border-white/10 text-center"
       >
         <h2 className="text-4xl font-bold mb-10">CONTACT</h2>
-        <div className="max-w-5xl mx-auto text-center mb-10">
-          <p className="opacity-70 mb-2">
-            서울시 구로구 디지털로 34길 55
-          </p>
-          <p className="opacity-70 mb-10">
-            contact@arotech.co.kr
-          </p>
-          <a
-            href="/support"
-            className="inline-block bg-white text-black font-bold px-10 py-3 rounded-full hover:bg-white/90 transition duration-200 mb-12"
-          >
-            문의하기
-          </a>
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div className="rounded-2xl overflow-hidden border border-white/10">
             <iframe
               title="AROTECH 오피스 위치"
               src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%EC%8B%9C+%EA%B5%AC%EB%A1%9C%EA%B5%AC+%EB%94%94%EC%A7%80%ED%84%B8%EB%A1%9C+34%EA%B8%B8+55&t=&z=17&ie=UTF8&iwloc=&output=embed"
               width="100%"
-              height="400"
+              height="280"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
+          </div>
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4">
+            <p className="opacity-70">
+              서울시 구로구 디지털로 34길 55
+            </p>
+            <p className="opacity-70">
+              contact@arotech.co.kr
+            </p>
+            <a
+              href="/support"
+              className="inline-block bg-white text-black font-bold px-10 py-3 rounded-full hover:bg-white/90 transition duration-200 mt-4"
+            >
+              문의하기
+            </a>
           </div>
         </div>
       </motion.section>
