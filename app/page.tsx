@@ -195,43 +195,25 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-16 text-center">
 
           <div className="flex flex-col items-center gap-3">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style={{ filter: "drop-shadow(0 0 6px #f59e0b)" }}>
-              <path d="M20 4 L36 13 L36 27 L20 36 L4 27 L4 13 Z" stroke="#f59e0b" strokeWidth="1.5" fill="none"/>
-              <path d="M20 4 L20 36" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.4"/>
-              <path d="M4 13 L36 13" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.4"/>
-              <path d="M4 27 L36 27" stroke="#f59e0b" strokeWidth="1" strokeOpacity="0.4"/>
-            </svg>
+            <Image src="/v_icon4.png" alt="설립 연도" width={50} height={50} />
             <p className="text-5xl font-extrabold">2022</p>
             <p className="text-white/40 text-sm">설립 연도</p>
           </div>
 
           <div className="flex flex-col items-center gap-3">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style={{ filter: "drop-shadow(0 0 6px #f59e0b)" }}>
-              <circle cx="20" cy="20" r="6" stroke="#f59e0b" strokeWidth="1.5"/>
-              <path d="M20 4 L20 8 M20 32 L20 36 M4 20 L8 20 M32 20 L36 20" stroke="#f59e0b" strokeWidth="1.5" strokeLinecap="round"/>
-              <path d="M8.7 8.7 L11.5 11.5 M28.5 28.5 L31.3 31.3 M8.7 31.3 L11.5 28.5 M28.5 11.5 L31.3 8.7" stroke="#f59e0b" strokeWidth="1.5" strokeLinecap="round"/>
-            </svg>
+            <Image src="/v_icon5.png" alt="진행 프로젝트" width={50} height={50} />
             <p className="text-5xl font-extrabold">2+</p>
             <p className="text-white/40 text-sm">진행 프로젝트</p>
           </div>
 
           <div className="flex flex-col items-center gap-3">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style={{ filter: "drop-shadow(0 0 6px #f59e0b)" }}>
-              <circle cx="20" cy="13" r="5" stroke="#f59e0b" strokeWidth="1.5"/>
-              <path d="M8 34 C8 25 32 25 32 34" stroke="#f59e0b" strokeWidth="1.5" strokeLinecap="round"/>
-              <circle cx="10" cy="14" r="3.5" stroke="#f59e0b" strokeWidth="1.2" strokeOpacity="0.6"/>
-              <circle cx="30" cy="14" r="3.5" stroke="#f59e0b" strokeWidth="1.2" strokeOpacity="0.6"/>
-              <path d="M2 32 C2 26 10 24 10 24" stroke="#f59e0b" strokeWidth="1.2" strokeLinecap="round" strokeOpacity="0.6"/>
-              <path d="M38 32 C38 26 30 24 30 24" stroke="#f59e0b" strokeWidth="1.2" strokeLinecap="round" strokeOpacity="0.6"/>
-            </svg>
+            <Image src="/v_icon6.png" alt="팀원" width={50} height={50} />
             <p className="text-5xl font-extrabold">40+</p>
             <p className="text-white/40 text-sm">팀원</p>
           </div>
 
           <div className="flex flex-col items-center gap-3">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style={{ filter: "drop-shadow(0 0 8px #a78bfa)" }}>
-              <path d="M12 20 C12 15 15 12 18 12 C21 12 23 15 20 20 C17 25 19 28 22 28 C25 28 28 25 28 20 C28 15 25 12 22 12 C19 12 17 15 20 20 C23 25 21 28 18 28 C15 28 12 25 12 20 Z" stroke="#a78bfa" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-            </svg>
+            <Image src="/v_icon7.png" alt="가능성" width={50} height={50} />
             <p className="text-5xl font-extrabold">∞</p>
             <p className="text-white/40 text-sm">가능성</p>
           </div>
