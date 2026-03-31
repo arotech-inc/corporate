@@ -154,10 +154,10 @@ export default function Home() {
           <div className="relative bg-zinc-900/80 border border-white/10 rounded-2xl p-8 overflow-hidden">
             <span className="text-white/30 text-xs tracking-widest block mb-6">01</span>
             <div className="absolute top-6 right-6">
-              <Image src="/v_icon1.png" alt="시스템 중심 설계" width={130} height={130} />
+              <Image src="/v_icon1.png" alt="시스템 중심 설계" width={90} height={90} />
             </div>
-            <h3 className="text-xl font-bold mb-3 pr-20">시스템 중심 설계</h3>
-            <p className="text-white/50 text-sm leading-relaxed">
+            <h3 className="text-xl font-bold mb-3 pr-24">시스템 중심 설계</h3>
+            <p className="text-white/50 text-sm leading-relaxed pr-24">
               직감이 아닌 구조와 데이터로 게임을 설계합니다.<br />
               반복 가능한 재미를 만드는 것이 우리의 기준입니다.
             </p>
@@ -167,10 +167,10 @@ export default function Home() {
           <div className="relative bg-zinc-900/80 border border-white/10 rounded-2xl p-8 overflow-hidden">
             <span className="text-white/30 text-xs tracking-widest block mb-6">02</span>
             <div className="absolute top-6 right-6">
-              <Image src="/v_icon2.png" alt="플레이어 경험 우선" width={130} height={130} />
+              <Image src="/v_icon2.png" alt="플레이어 경험 우선" width={90} height={90} />
             </div>
-            <h3 className="text-xl font-bold mb-3 pr-20">플레이어 경험 우선</h3>
-            <p className="text-white/50 text-sm leading-relaxed">
+            <h3 className="text-xl font-bold mb-3 pr-24">플레이어 경험 우선</h3>
+            <p className="text-white/50 text-sm leading-relaxed pr-24">
               모든 기획과 개발의 출발점은 플레이어입니다.<br />
               유저가 몰입하는 순간을 끊임없이 연구합니다.
             </p>
@@ -180,10 +180,10 @@ export default function Home() {
           <div className="relative bg-zinc-900/80 border border-white/10 rounded-2xl p-8 overflow-hidden">
             <span className="text-white/30 text-xs tracking-widest block mb-6">03</span>
             <div className="absolute top-6 right-6">
-              <Image src="/v_icon3.png" alt="빠른 실행, 빠른 검증" width={130} height={130} />
+              <Image src="/v_icon3.png" alt="빠른 실행, 빠른 검증" width={90} height={90} />
             </div>
-            <h3 className="text-xl font-bold mb-3 pr-20">빠른 실행, 빠른 검증</h3>
-            <p className="text-white/50 text-sm leading-relaxed">
+            <h3 className="text-xl font-bold mb-3 pr-24">빠른 실행, 빠른 검증</h3>
+            <p className="text-white/50 text-sm leading-relaxed pr-24">
               완벽한 기획보다 빠른 프로토타입을 믿습니다.<br />
               만들고, 테스트하고, 개선하는 사이클을 반복합니다.
             </p>
