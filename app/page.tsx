@@ -214,7 +214,6 @@ export default function Home() {
 
           <div className="flex flex-col items-center gap-3">
             <Image src="/v_icon7.png" alt="가능성" width={50} height={50} />
-            <p className="text-5xl font-extrabold">∞</p>
             <p className="text-white/40 text-sm">가능성</p>
           </div>
 
