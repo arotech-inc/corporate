@@ -180,7 +180,7 @@ export default function Home() {
           <div className="relative bg-zinc-900/80 border border-white/10 rounded-2xl p-8 overflow-hidden">
             <span className="text-white/30 text-xs tracking-widest block mb-6">03</span>
             <div className="absolute top-6 right-6">
-              <Image src="/v_icon3.png" alt="빠른 실행, 빠른 검증" width={90} height={90} />
+              <Image src="/vision_icon3.png" alt="빠른 실행, 빠른 검증" width={90} height={90} />
             </div>
             <h3 className="text-xl font-bold mb-3 pr-20">빠른 실행, 빠른 검증</h3>
             <p className="text-white/50 text-sm leading-relaxed">
@@ -213,7 +213,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center gap-3">
-            <Image src="/v_icon7.png" alt="가능성" width={50} height={50} />
+            <Image src="/v_icon7.png" alt="가능성" width={100} height={100} />
             <p className="text-white/40 text-sm">가능성</p>
           </div>
 
