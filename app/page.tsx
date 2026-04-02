@@ -339,7 +339,7 @@ export default function Home() {
             />
           </div>
           <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl px-10 py-10 flex items-center justify-center">
-            <div className="flex flex-col gap-5 text-left">
+            <div className="flex flex-col items-center gap-5 text-center">
               <p className="text-white/80">
                 서울시 구로구 디지털로 34길 55
               </p>
@@ -348,7 +348,7 @@ export default function Home() {
               </p>
               <a
                 href="/support"
-                className="inline-block bg-white text-black font-bold px-10 py-3 rounded-full hover:bg-white/90 transition duration-200 mt-2 w-fit"
+                className="inline-block bg-white text-black font-bold px-10 py-3 rounded-full hover:bg-white/90 transition duration-200 mt-2"
               >
                 문의하기
               </a>
