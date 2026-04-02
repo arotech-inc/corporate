@@ -195,26 +195,27 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-16 text-center">
 
           <div className="flex flex-col items-center gap-3">
-            <Image src="/v_icon4.png" alt="설립 연도" width={50} height={50} />
+            <Image src="/v_icon4.png" alt="설립 연도" width={65} height={65} />
             <p className="text-5xl font-extrabold">2022</p>
-            <p className="text-white/40 text-sm">설립 연도</p>
+            <p className="text-white/40 text-base">설립 연도</p>
           </div>
 
           <div className="flex flex-col items-center gap-3">
-            <Image src="/v_icon5.png" alt="진행 프로젝트" width={50} height={50} />
+            <Image src="/v_icon5.png" alt="진행 프로젝트" width={65} height={65} />
             <p className="text-5xl font-extrabold">2+</p>
-            <p className="text-white/40 text-sm">진행 프로젝트</p>
+            <p className="text-white/40 text-base">진행 프로젝트</p>
           </div>
 
           <div className="flex flex-col items-center gap-3">
-            <Image src="/v_icon6.png" alt="팀원" width={50} height={50} />
+            <Image src="/v_icon6.png" alt="팀원" width={65} height={65} />
             <p className="text-5xl font-extrabold">40+</p>
-            <p className="text-white/40 text-sm">팀원</p>
+            <p className="text-white/40 text-base">팀원</p>
           </div>
 
           <div className="flex flex-col items-center gap-3">
-            <Image src="/v_icon7.png" alt="가능성" width={100} height={100} />
-            <p className="text-white/40 text-sm">가능성</p>
+            <div className="h-[65px]" />
+            <Image src="/v_icon7.png" alt="가능성" width={120} height={120} />
+            <p className="text-white/40 text-base">가능성</p>
           </div>
 
         </div>
