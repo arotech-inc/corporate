@@ -192,7 +192,7 @@ export default function Home() {
         </div>
 
         {/* Stats Row */}
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-16 text-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-16 text-center items-end">
 
           <div className="flex flex-col items-center gap-3">
             <Image src="/v_icon4.png" alt="설립 연도" width={65} height={65} />
@@ -213,8 +213,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center gap-3">
-            <div className="h-[65px]" />
-            <Image src="/v_icon7.png" alt="가능성" width={120} height={120} />
+            <Image src="/v_icon7.png" alt="가능성" width={130} height={130} />
             <p className="text-white/40 text-base">가능성</p>
           </div>
 
