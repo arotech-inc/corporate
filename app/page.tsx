@@ -339,13 +339,21 @@ export default function Home() {
             <p className="text-xs tracking-widest text-white/40 uppercase mb-8">Benefits</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { icon: "👕", label: "자율복장", desc: "복장 제한 없음" },
-                { icon: "🖥️", label: "장비 지원", desc: "고사양 개발 장비 제공" },
-                { icon: "🎁", label: "경조사비 지원", desc: "각종 경조사 지원" },
-                { icon: "🎮", label: "게임 지원", desc: "스팀·콘솔 게임 구매 지원" },
+                { label: "자율복장", desc: "복장 제한 없음", icon: (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2C9.5 2 8 3.5 8 5c0 1 .5 2 1.5 2.5L4 10v4l3-1v9h10v-9l3 1v-4l-5.5-2.5C15.5 7 16 6 16 5c0-1.5-1.5-3-4-3z"/></svg>
+                )},
+                { label: "장비 지원", desc: "고사양 개발 장비 제공", icon: (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                )},
+                { label: "경조사비 지원", desc: "각종 경조사 지원", icon: (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7c-1.5-2-3-3-5-3 1 0 3.5.5 5 3"/><path d="M12 7c1.5-2 3-3 5-3-1 0-3.5.5-5 3"/></svg>
+                )},
+                { label: "게임 지원", desc: "스팀·콘솔 게임 구매 지원", icon: (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="6" width="20" height="12" rx="3"/><circle cx="17" cy="10" r="1" fill="currentColor"/><circle cx="15" cy="14" r="1" fill="currentColor"/><line x1="6" y1="10" x2="10" y2="10"/><line x1="8" y1="8" x2="8" y2="12"/></svg>
+                )},
               ].map(({ icon, label, desc }) => (
                 <div key={label} className="bg-zinc-900 border border-white/10 rounded-2xl px-6 py-6 text-center">
-                  <div className="text-3xl mb-3">{icon}</div>
+                  <div className="flex justify-center text-white/60 mb-3">{icon}</div>
                   <p className="font-semibold text-sm mb-1">{label}</p>
                   <p className="text-white/40 text-xs">{desc}</p>
                 </div>
