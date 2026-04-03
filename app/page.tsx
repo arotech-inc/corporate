@@ -241,7 +241,15 @@ export default function Home() {
 
           {/* 채용 포지션 */}
           <div className="mb-24">
-            <p className="text-xs tracking-widest text-white/40 uppercase mb-8">Open Positions</p>
+            <div className="flex items-center justify-between mb-8">
+              <p className="text-xs tracking-widest text-white/40 uppercase">Open Positions</p>
+              <a
+                href="/careers"
+                className="text-sm text-white/40 border border-white/10 rounded-full px-5 py-2 hover:text-white hover:border-white/30 transition duration-200"
+              >
+                View More →
+              </a>
+            </div>
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 { role: "Game Designer", type: "정규직", desc: "시스템 설계, 밸런싱, 콘텐츠 기획 전반을 담당합니다." },
