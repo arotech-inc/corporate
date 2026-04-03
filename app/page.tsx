@@ -269,9 +269,53 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-white/30 text-sm">
-              지원 문의: <a href="mailto:arotech2024@arotech.info" className="text-white/50 hover:text-white transition">arotech2024@arotech.info</a>
+            <p className="mt-8 text-white/40 text-sm text-center">
+              채용 진행중인 포지션은 아래 채용 사이트에서 확인 가능합니다.
             </p>
+            <div className="flex justify-center gap-4 mt-4">
+              {[
+                { name: "GAMEJOB", href: "https://www.gamejob.co.kr", logo: (
+                  <div className="flex items-center gap-1.5">
+                    <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#00B4D8"/><path d="M10 11l6 5-6 5V11z" fill="#fff"/><path d="M16 11l6 5-6 5V11z" fill="#fff" opacity=".6"/></svg>
+                    <span className="text-xs font-extrabold tracking-tight">GAMEJOB</span>
+                  </div>
+                )},
+                { name: "JOBKOREA", href: "https://www.jobkorea.co.kr", logo: (
+                  <span className="text-xs font-extrabold tracking-tight">JOBKOREA</span>
+                )},
+                { name: "saramin", href: "https://www.saramin.co.kr", logo: (
+                  <div className="flex items-center gap-1">
+                    <div className="flex flex-col gap-px">
+                      <div className="flex gap-px">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#7B68EE]" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#7B68EE] opacity-50" />
+                      </div>
+                      <div className="flex gap-px">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#00D4AA] opacity-50" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#00D4AA]" />
+                      </div>
+                    </div>
+                    <span className="text-xs font-bold">saramin</span>
+                  </div>
+                )},
+                { name: "LinkedIn", href: "https://www.linkedin.com", logo: (
+                  <div className="flex items-center gap-0.5">
+                    <span className="text-xs font-bold">Linked</span>
+                    <span className="text-xs font-bold bg-[#0A66C2] text-white px-1 rounded text-[10px]">in</span>
+                  </div>
+                )},
+              ].map(({ name, href, logo }) => (
+                <a
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white rounded-xl px-4 py-3 flex items-center justify-center text-black hover:scale-105 transition duration-300"
+                >
+                  {logo}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* 복지 */}
@@ -312,6 +356,9 @@ export default function Home() {
 
           {/* 지원하기 버튼 */}
           <div className="text-center mt-20">
+            <p className="text-white/30 text-sm mb-4">
+              지원 문의: <a href="mailto:arotech2024@arotech.info" className="text-white/50 hover:text-white transition">arotech2024@arotech.info</a>
+            </p>
             <a
               href="/apply"
               className="inline-block bg-white text-black font-bold text-lg px-12 py-4 rounded-full hover:bg-white/90 transition duration-200"
