@@ -274,33 +274,36 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-white/40 text-sm">
+            <p className="mt-8 text-white/40 text-sm">
               채용 진행중인 포지션은 아래 채용 사이트에서 확인 가능합니다.
             </p>
-            <div className="flex gap-3 mt-3">
+            <div className="grid grid-cols-3 gap-6 mt-4">
               {[
                 { name: "GAMEJOB", href: "https://www.gamejob.co.kr", logo: (
-                  <div className="flex items-center gap-1.5">
-                    <svg width="16" height="16" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#00B4D8"/><path d="M10 11l6 5-6 5V11z" fill="#fff"/><path d="M16 11l6 5-6 5V11z" fill="#fff" opacity=".6"/></svg>
-                    <span className="text-xs font-extrabold tracking-tight">GAMEJOB</span>
+                  <div className="flex flex-col items-center gap-3">
+                    <svg width="36" height="36" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#00B4D8"/><path d="M10 11l6 5-6 5V11z" fill="#fff"/><path d="M16 11l6 5-6 5V11z" fill="#fff" opacity=".6"/></svg>
+                    <span className="text-sm font-extrabold tracking-tight">GAMEJOB</span>
                   </div>
                 )},
                 { name: "JOBKOREA", href: "https://www.jobkorea.co.kr", logo: (
-                  <span className="text-xs font-extrabold tracking-tight">JOBKOREA</span>
+                  <div className="flex flex-col items-center gap-3">
+                    <svg width="36" height="36" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#2B64CE"/><text x="16" y="22" textAnchor="middle" fill="#fff" fontSize="16" fontWeight="bold">J</text></svg>
+                    <span className="text-sm font-extrabold tracking-tight">JOBKOREA</span>
+                  </div>
                 )},
                 { name: "saramin", href: "https://www.saramin.co.kr", logo: (
-                  <div className="flex items-center gap-1">
-                    <div className="flex flex-col gap-px">
-                      <div className="flex gap-px">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#7B68EE]" />
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#7B68EE] opacity-50" />
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="flex flex-col gap-1">
+                      <div className="flex gap-1">
+                        <span className="w-3.5 h-3.5 rounded-full bg-[#7B68EE]" />
+                        <span className="w-3.5 h-3.5 rounded-full bg-[#7B68EE] opacity-50" />
                       </div>
-                      <div className="flex gap-px">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#00D4AA] opacity-50" />
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#00D4AA]" />
+                      <div className="flex gap-1">
+                        <span className="w-3.5 h-3.5 rounded-full bg-[#00D4AA] opacity-50" />
+                        <span className="w-3.5 h-3.5 rounded-full bg-[#00D4AA]" />
                       </div>
                     </div>
-                    <span className="text-xs font-bold">saramin</span>
+                    <span className="text-sm font-bold">saramin</span>
                   </div>
                 )},
               ].map(({ name, href, logo }) => (
@@ -309,7 +312,7 @@ export default function Home() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white rounded-lg px-3 py-2 flex items-center justify-center text-black hover:scale-105 transition duration-300"
+                  className="bg-white rounded-2xl px-6 py-6 flex items-center justify-center text-black hover:scale-105 transition duration-300"
                 >
                   {logo}
                 </a>
