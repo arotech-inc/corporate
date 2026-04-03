@@ -126,6 +126,61 @@ export default function CareersPage() {
         </div>
       </section>
 
+      {/* 채용 사이트 안내 */}
+      <section className="py-24 px-6 border-t border-white/10">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="text-white/50 text-lg mb-12">
+            채용 진행중인 포지션은 아래 채용 사이트에서 확인 가능합니다.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { name: "GAMEJOB", href: "https://www.gamejob.co.kr", logo: (
+                <div className="flex items-center justify-center gap-2">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#00B4D8"/><path d="M10 11l6 5-6 5V11z" fill="#fff"/><path d="M16 11l6 5-6 5V11z" fill="#fff" opacity=".6"/></svg>
+                  <span className="text-xl font-extrabold tracking-tight">GAMEJOB</span>
+                </div>
+              )},
+              { name: "JOBKOREA", href: "https://www.jobkorea.co.kr", logo: (
+                <div className="flex items-center justify-center">
+                  <span className="text-xl font-extrabold tracking-tight">JOBKOREA</span>
+                </div>
+              )},
+              { name: "saramin", href: "https://www.saramin.co.kr", logo: (
+                <div className="flex items-center justify-center gap-2">
+                  <div className="flex flex-col gap-0.5">
+                    <div className="flex gap-0.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#7B68EE]" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#7B68EE] opacity-50" />
+                    </div>
+                    <div className="flex gap-0.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#00D4AA] opacity-50" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#00D4AA]" />
+                    </div>
+                  </div>
+                  <span className="text-xl font-bold">saramin</span>
+                </div>
+              )},
+              { name: "LinkedIn", href: "https://www.linkedin.com", logo: (
+                <div className="flex items-center justify-center gap-1">
+                  <span className="text-xl font-bold">Linked</span>
+                  <span className="text-xl font-bold bg-[#0A66C2] text-white px-1.5 rounded">in</span>
+                </div>
+              )},
+            ].map(({ name, href, logo }) => (
+              <a
+                key={name}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-2xl px-6 py-8 flex items-center justify-center text-black hover:scale-105 transition duration-300"
+              >
+                {logo}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 복지 및 혜택 */}
       <section className="py-24 px-6 border-t border-white/10">
         <div className="max-w-5xl mx-auto">
