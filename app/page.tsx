@@ -232,24 +232,29 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
 
           {/* Heading */}
-          <div className="text-center mb-24">
-            <h2 className="text-5xl font-bold mb-6">CAREERS</h2>
-            <p className="opacity-60 max-w-2xl mx-auto text-lg">
-              AROTECH와 함께 새로운 경험을 설계할 동료를 찾습니다.
-            </p>
+          <div className="relative rounded-3xl overflow-hidden mb-24">
+            <div className="relative h-64 md:h-80">
+              <Image
+                src="/office.jpg"
+                alt="AROTECH Office"
+                fill
+                sizes="100vw"
+                quality={85}
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/60" />
+            </div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center px-6">
+              <h2 className="text-5xl font-bold mb-6">CAREERS</h2>
+              <p className="opacity-60 max-w-2xl mx-auto text-lg text-center">
+                AROTECH와 함께 새로운 경험을 설계할 동료를 찾습니다.
+              </p>
+            </div>
           </div>
 
           {/* 채용 포지션 */}
           <div className="mb-24">
-            <div className="flex items-center justify-between mb-8">
-              <p className="text-xs tracking-widest text-white/40 uppercase">Open Positions</p>
-              <a
-                href="/careers"
-                className="text-sm text-white/40 border border-white/10 rounded-full px-5 py-2 hover:text-white hover:border-white/30 transition duration-200"
-              >
-                View More →
-              </a>
-            </div>
+            <p className="text-xs tracking-widest text-white/40 uppercase mb-8">Open Positions</p>
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 { role: "Game Designer", type: "정규직", desc: "시스템 설계, 밸런싱, 콘텐츠 기획 전반을 담당합니다." },
@@ -269,14 +274,14 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="mt-8 text-white/40 text-sm text-center">
+            <p className="mt-6 text-white/40 text-sm">
               채용 진행중인 포지션은 아래 채용 사이트에서 확인 가능합니다.
             </p>
-            <div className="flex justify-center gap-4 mt-4">
+            <div className="flex gap-3 mt-3">
               {[
                 { name: "GAMEJOB", href: "https://www.gamejob.co.kr", logo: (
                   <div className="flex items-center gap-1.5">
-                    <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#00B4D8"/><path d="M10 11l6 5-6 5V11z" fill="#fff"/><path d="M16 11l6 5-6 5V11z" fill="#fff" opacity=".6"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#00B4D8"/><path d="M10 11l6 5-6 5V11z" fill="#fff"/><path d="M16 11l6 5-6 5V11z" fill="#fff" opacity=".6"/></svg>
                     <span className="text-xs font-extrabold tracking-tight">GAMEJOB</span>
                   </div>
                 )},
@@ -298,19 +303,13 @@ export default function Home() {
                     <span className="text-xs font-bold">saramin</span>
                   </div>
                 )},
-                { name: "LinkedIn", href: "https://www.linkedin.com", logo: (
-                  <div className="flex items-center gap-0.5">
-                    <span className="text-xs font-bold">Linked</span>
-                    <span className="text-xs font-bold bg-[#0A66C2] text-white px-1 rounded text-[10px]">in</span>
-                  </div>
-                )},
               ].map(({ name, href, logo }) => (
                 <a
                   key={name}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white rounded-xl px-4 py-3 flex items-center justify-center text-black hover:scale-105 transition duration-300"
+                  className="bg-white rounded-lg px-3 py-2 flex items-center justify-center text-black hover:scale-105 transition duration-300"
                 >
                   {logo}
                 </a>
@@ -318,8 +317,25 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 복지 */}
+          {/* 팀 문화 */}
           <div className="mb-24">
+            <p className="text-xs tracking-widest text-white/40 uppercase mb-8">Team Culture</p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { title: "자율적 의사결정", body: "각자의 영역에서 스스로 판단하고 실행합니다. 보고를 위한 보고는 없습니다." },
+                { title: "수평적 소통", body: "직급보다 논리가 먼저입니다. 누구나 의견을 내고, 최선의 답을 함께 찾습니다." },
+                { title: "성장을 위한 투자", body: "컨퍼런스, 도서, 교육비를 지원합니다. 개인의 성장이 곧 팀의 성장입니다." },
+              ].map(({ title, body }) => (
+                <div key={title} className="border-l-2 border-white/20 pl-6 py-2">
+                  <h4 className="font-bold mb-3">{title}</h4>
+                  <p className="text-white/50 text-sm leading-relaxed">{body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 복지 */}
+          <div>
             <p className="text-xs tracking-widest text-white/40 uppercase mb-8">Benefits</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
@@ -332,23 +348,6 @@ export default function Home() {
                   <div className="text-3xl mb-3">{icon}</div>
                   <p className="font-semibold text-sm mb-1">{label}</p>
                   <p className="text-white/40 text-xs">{desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* 팀 문화 */}
-          <div>
-            <p className="text-xs tracking-widest text-white/40 uppercase mb-8">Team Culture</p>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { title: "자율적 의사결정", body: "각자의 영역에서 스스로 판단하고 실행합니다. 보고를 위한 보고는 없습니다." },
-                { title: "수평적 소통", body: "직급보다 논리가 먼저입니다. 누구나 의견을 내고, 최선의 답을 함께 찾습니다." },
-                { title: "성장을 위한 투자", body: "컨퍼런스, 도서, 교육비를 지원합니다. 개인의 성장이 곧 팀의 성장입니다." },
-              ].map(({ title, body }) => (
-                <div key={title} className="border-l-2 border-white/20 pl-6 py-2">
-                  <h4 className="font-bold mb-3">{title}</h4>
-                  <p className="text-white/50 text-sm leading-relaxed">{body}</p>
                 </div>
               ))}
             </div>
