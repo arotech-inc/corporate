@@ -367,10 +367,10 @@ export default function Home() {
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>
                 )},
               ].map(({ icon, label, desc }) => (
-                <div key={label} className="bg-zinc-900 border border-white/10 rounded-2xl px-6 py-6 text-center">
-                  <div className="flex justify-center text-white/60 mb-3">{icon}</div>
-                  <p className="font-semibold text-sm mb-1">{label}</p>
-                  <p className="text-white/40 text-xs">{desc}</p>
+                <div key={label} className="group bg-zinc-900 border border-white/10 rounded-2xl px-6 py-6 text-center hover:bg-white hover:border-white transition-all duration-300 hover:scale-105 cursor-default">
+                  <div className="flex justify-center text-white/60 group-hover:text-black transition-colors duration-300 mb-3">{icon}</div>
+                  <p className="font-semibold text-sm mb-1 group-hover:text-black transition-colors duration-300">{label}</p>
+                  <p className="text-white/40 text-xs group-hover:text-black/50 transition-colors duration-300">{desc}</p>
                 </div>
               ))}
             </div>
