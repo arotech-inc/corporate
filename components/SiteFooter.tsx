@@ -33,7 +33,7 @@ export default function SiteFooter() {
           <div className="space-y-1.5">
             <h4 className="font-bold text-base mb-4 text-white opacity-100">Support</h4>
             <p><Link href="/support" className="hover:text-white transition">고객지원</Link></p>
-            <p>contact@arotech.co.kr</p>
+            <p>arotech2024@arotech.info</p>
           </div>
 
         </div>

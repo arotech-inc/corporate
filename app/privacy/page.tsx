@@ -92,7 +92,7 @@ export default function PrivacyPage() {
             <h3 className="text-xl font-bold mb-4 text-white">개인정보 보호 책임자</h3>
             <div className="bg-white/5 border border-white/10 rounded-2xl px-6 py-5 inline-block">
               <p className="text-white/40 text-xs mb-1">이메일</p>
-              <p className="text-white font-medium">contact@arotech.co.kr</p>
+              <p className="text-white font-medium">arotech2024@arotech.info</p>
             </div>
           </article>
 

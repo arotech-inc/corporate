@@ -71,7 +71,7 @@ export default function Home() {
             href="https://bcm-lovat.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:border-indigo-500 hover:scale-105"
+            className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:scale-105"
           >
             <div className="relative h-48 md:h-64 lg:h-80 overflow-hidden">
               <Image
@@ -96,7 +96,7 @@ export default function Home() {
             href="https://dearidol.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:border-pink-500 hover:scale-105"
+            className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:scale-105"
           >
             <div className="relative h-48 md:h-64 lg:h-80 overflow-hidden">
               <Image
@@ -262,7 +262,7 @@ export default function Home() {
               ))}
             </div>
             <p className="mt-6 text-white/30 text-sm">
-              지원 문의: <a href="mailto:contact@arotech.co.kr" className="text-white/50 hover:text-white transition">contact@arotech.co.kr</a>
+              지원 문의: <a href="mailto:arotech2024@arotech.info" className="text-white/50 hover:text-white transition">arotech2024@arotech.info</a>
             </p>
           </div>
 
@@ -292,7 +292,7 @@ export default function Home() {
               {[
                 { title: "자율적 의사결정", body: "각자의 영역에서 스스로 판단하고 실행합니다. 보고를 위한 보고는 없습니다." },
                 { title: "수평적 소통", body: "직급보다 논리가 먼저입니다. 누구나 의견을 내고, 최선의 답을 함께 찾습니다." },
-                { title: "직접 만들고 검증한다", body: "아이디어는 빠르게 프로토타입으로, 결과는 플레이어의 반응으로 검증합니다." },
+                { title: "성장을 위한 투자", body: "컨퍼런스, 도서, 교육비를 지원합니다. 개인의 성장이 곧 팀의 성장입니다." },
               ].map(({ title, body }) => (
                 <div key={title} className="border-l-2 border-white/20 pl-6 py-2">
                   <h4 className="font-bold mb-3">{title}</h4>
@@ -344,7 +344,7 @@ export default function Home() {
                 서울시 구로구 디지털로 34길 55
               </p>
               <p className="text-white/80">
-                contact@arotech.co.kr
+                arotech2024@arotech.info
               </p>
               <a
                 href="/support"

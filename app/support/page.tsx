@@ -17,7 +17,7 @@ export default function SupportPage() {
     const { name, email, message } = form;
     const subject = encodeURIComponent(`[고객문의] ${name}`);
     const body = encodeURIComponent(`이름: ${name}\n이메일: ${email}\n\n${message}`);
-    window.location.href = `mailto:contact@arotech.co.kr?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:arotech2024@arotech.info?subject=${subject}&body=${body}`;
     setSubmitted(true);
   }
 
@@ -87,7 +87,7 @@ export default function SupportPage() {
                 문의 보내기
               </button>
               <p className="text-center text-white/30 text-xs">
-                또는 직접 이메일로 문의: contact@arotech.co.kr
+                또는 직접 이메일로 문의: arotech2024@arotech.info
               </p>
             </form>
           )}

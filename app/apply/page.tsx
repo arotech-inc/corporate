@@ -35,7 +35,7 @@ export default function ApplyPage() {
     const body = encodeURIComponent(
       `이름: ${name}\n이메일: ${email}\n연락처: ${phone}\n지원 포지션: ${position}\n포트폴리오: ${portfolio}\n\n자기소개:\n${message}`
     );
-    window.location.href = `mailto:contact@arotech.co.kr?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:arotech2024@arotech.info?subject=${subject}&body=${body}`;
     setSubmitted(true);
   }
 
