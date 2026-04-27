@@ -13,6 +13,8 @@ const positions = [
 
 export default function ApplyPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -28,15 +30,29 @@ export default function ApplyPage() {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const { name, email, phone, position, portfolio, message } = form;
-    const subject = encodeURIComponent(`[채용지원] ${position} - ${name}`);
-    const body = encodeURIComponent(
-      `이름: ${name}\n이메일: ${email}\n연락처: ${phone}\n지원 포지션: ${position}\n포트폴리오: ${portfolio}\n\n자기소개:\n${message}`
-    );
-    window.location.href = `mailto:arotech2024@arotech.info?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+    setSubmitting(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "전송에 실패했습니다.");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "전송에 실패했습니다.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -176,16 +192,20 @@ export default function ApplyPage() {
                 />
               </div>
 
+              {error && (
+                <p className="text-center text-red-400 text-sm">{error}</p>
+              )}
+
               <button
                 type="submit"
-                disabled={!form.position}
+                disabled={!form.position || submitting}
                 className="w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-white/90 transition disabled:opacity-30 disabled:cursor-not-allowed"
               >
-                지원서 제출하기
+                {submitting ? "전송 중..." : "지원서 제출하기"}
               </button>
 
               <p className="text-center text-white/30 text-xs">
-                제출 시 이메일 클라이언트가 열립니다 · 포트폴리오 파일은 메일에 첨부해주세요
+                포트폴리오 파일은 제출 후 별도 이메일로 보내주세요
               </p>
             </form>
           )}
