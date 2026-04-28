@@ -12,7 +12,7 @@ export default function SiteFooter() {
             alt="AROTECH"
             width={800}
             height={399}
-            className="h-10 w-auto"
+            className="h-30 w-auto"
             priority={false}
           />
         </div>
