@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function SiteFooter() {
@@ -5,12 +6,15 @@ export default function SiteFooter() {
     <footer className="py-20 border-t border-white/10 bg-black">
       <div className="max-w-6xl mx-auto px-6">
 
-        {/* 로고 자리 */}
         <div className="mb-12">
-          {/* TODO: 로고 이미지 추가 시 아래 텍스트를 <Image /> 로 교체 */}
-          <div className="w-40 h-10 border border-dashed border-white/20 rounded-lg flex items-center justify-center text-white/20 text-xs">
-            LOGO
-          </div>
+          <Image
+            src="/aro_logo_b.png"
+            alt="AROTECH"
+            width={800}
+            height={399}
+            className="h-10 w-auto"
+            priority={false}
+          />
         </div>
 
         <div className="grid md:grid-cols-3 gap-12 text-sm opacity-70">
