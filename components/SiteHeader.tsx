@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -16,8 +17,16 @@ export default function SiteHeader({ showBack = false }: { showBack?: boolean })
   return (
     <header className="fixed top-0 w-full bg-black/70 backdrop-blur-lg border-b border-white/10 z-50">
       <div className="max-w-6xl mx-auto px-8 py-6 flex justify-between items-center">
-        <Link href="/" className="text-lg font-bold tracking-wide hover:opacity-70 transition">
-          AROTECH
+        <Link href="/" className="flex items-center gap-2.5 hover:opacity-70 transition">
+          <Image
+            src="/aro_logo_black.png"
+            alt=""
+            width={800}
+            height={399}
+            className="h-7 w-auto invert"
+            priority
+          />
+          <span className="text-lg font-bold tracking-wide">AROTECH</span>
         </Link>
 
         {showBack ? (
