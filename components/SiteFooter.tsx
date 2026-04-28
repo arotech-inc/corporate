@@ -8,7 +8,7 @@ export default function SiteFooter() {
 
         <div className="mb-12">
           <Image
-            src="/aro_logo_b.png"
+            src="/aro_logo_black.png"
             alt="AROTECH"
             width={800}
             height={399}
