@@ -19,11 +19,11 @@ export default function SiteHeader({ showBack = false }: { showBack?: boolean })
       <div className="max-w-6xl mx-auto px-8 py-6 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2.5 hover:opacity-70 transition">
           <Image
-            src="/aro_logo_black.png"
+            src="/aro_logo_symbol.png"
             alt=""
-            width={800}
-            height={399}
-            className="h-7 w-auto invert"
+            width={162}
+            height={170}
+            className="h-8 w-auto"
             priority
           />
           <span className="text-lg font-bold tracking-wide">AROTECH</span>
