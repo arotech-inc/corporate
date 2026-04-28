@@ -42,10 +42,10 @@ export default function Home() {
 
         <div className="relative z-10 text-center px-6">
           <h1 className="text-5xl md:text-8xl font-extrabold tracking-tight">
-            BUILD THE SYSTEM
+            BUILD DEEP, PLAY HIGH
           </h1>
           <p className="mt-4 md:mt-6 opacity-70 max-w-xl mx-auto text-sm md:text-base">
-            구조와 전략이 살아있는 게임을 설계하는 차세대 스튜디오
+            깊이 있는 시스템이 만드는 압도적인 몰입감
           </p>
         </div>
 
