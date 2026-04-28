@@ -11,10 +11,21 @@ const positions = [
   { role: "2D Artist", type: "계약직 · 프리랜서" },
 ];
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+type ApplyErrors = {
+  name?: string;
+  email?: string;
+  phone?: string;
+  position?: string;
+  message?: string;
+};
+
 export default function ApplyPage() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [errors, setErrors] = useState<ApplyErrors>({});
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -24,14 +35,48 @@ export default function ApplyPage() {
     message: "",
   });
 
+  function clearError(field: keyof ApplyErrors) {
+    if (errors[field]) {
+      setErrors({ ...errors, [field]: undefined });
+    }
+  }
+
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+    clearError(name as keyof ApplyErrors);
+  }
+
+  function selectPosition(role: string) {
+    setForm({ ...form, position: role });
+    clearError("position");
+  }
+
+  function validate(): ApplyErrors {
+    const errs: ApplyErrors = {};
+    if (!form.position) errs.position = "지원 포지션을 선택해주세요.";
+    if (!form.name.trim()) errs.name = "이름을 입력해주세요.";
+    if (!form.phone.trim()) errs.phone = "연락처를 입력해주세요.";
+    if (!form.email.trim()) {
+      errs.email = "이메일을 입력해주세요.";
+    } else if (!EMAIL_REGEX.test(form.email.trim())) {
+      errs.email = "올바른 이메일 형식이 아닙니다. (예: example@domain.com)";
+    }
+    if (!form.message.trim()) errs.message = "자기소개를 입력해주세요.";
+    return errs;
   }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    setErrors({});
     setSubmitting(true);
     setError("");
 
@@ -54,6 +99,13 @@ export default function ApplyPage() {
       setSubmitting(false);
     }
   }
+
+  const inputClass = (hasError: boolean) =>
+    `w-full bg-zinc-900 border rounded-xl px-5 py-4 text-white placeholder-white/20 focus:outline-none transition ${
+      hasError
+        ? "border-red-500/60 focus:border-red-500"
+        : "border-white/10 focus:border-white/30"
+    }`;
 
   return (
     <main className="bg-black text-white min-h-screen">
@@ -88,7 +140,7 @@ export default function ApplyPage() {
               </a>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form onSubmit={handleSubmit} noValidate className="space-y-8">
 
               {/* 포지션 선택 */}
               <div>
@@ -96,24 +148,33 @@ export default function ApplyPage() {
                   지원 포지션 *
                 </label>
                 <div className="grid grid-cols-2 gap-3">
-                  {positions.map(({ role, type }) => (
-                    <button
-                      type="button"
-                      key={role}
-                      onClick={() => setForm({ ...form, position: role })}
-                      className={`text-left px-5 py-4 rounded-xl border transition duration-200 ${
-                        form.position === role
-                          ? "bg-white text-black border-white"
-                          : "bg-zinc-900 border-white/10 text-white/70 hover:border-white/30"
-                      }`}
-                    >
-                      <p className="font-semibold text-sm">{role}</p>
-                      <p className={`text-xs mt-1 ${form.position === role ? "text-black/50" : "text-white/30"}`}>
-                        {type}
-                      </p>
-                    </button>
-                  ))}
+                  {positions.map(({ role, type }) => {
+                    const selected = form.position === role;
+                    const showError = !!errors.position && !selected;
+                    return (
+                      <button
+                        type="button"
+                        key={role}
+                        onClick={() => selectPosition(role)}
+                        className={`text-left px-5 py-4 rounded-xl border transition duration-200 ${
+                          selected
+                            ? "bg-white text-black border-white"
+                            : showError
+                            ? "bg-zinc-900 border-red-500/60 text-white/70 hover:border-red-500"
+                            : "bg-zinc-900 border-white/10 text-white/70 hover:border-white/30"
+                        }`}
+                      >
+                        <p className="font-semibold text-sm">{role}</p>
+                        <p className={`text-xs mt-1 ${selected ? "text-black/50" : "text-white/30"}`}>
+                          {type}
+                        </p>
+                      </button>
+                    );
+                  })}
                 </div>
+                {errors.position && (
+                  <p className="mt-2 text-red-400 text-xs">{errors.position}</p>
+                )}
               </div>
 
               {/* 인적사항 */}
@@ -125,12 +186,14 @@ export default function ApplyPage() {
                   <input
                     type="text"
                     name="name"
-                    required
                     value={form.name}
                     onChange={handleChange}
                     placeholder="홍길동"
-                    className="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-white/20 focus:outline-none focus:border-white/30 transition"
+                    className={inputClass(!!errors.name)}
                   />
+                  {errors.name && (
+                    <p className="mt-2 text-red-400 text-xs">{errors.name}</p>
+                  )}
                 </div>
                 <div>
                   <label className="block text-xs tracking-widest text-white/40 uppercase mb-2">
@@ -139,12 +202,14 @@ export default function ApplyPage() {
                   <input
                     type="tel"
                     name="phone"
-                    required
                     value={form.phone}
                     onChange={handleChange}
                     placeholder="010-0000-0000"
-                    className="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-white/20 focus:outline-none focus:border-white/30 transition"
+                    className={inputClass(!!errors.phone)}
                   />
+                  {errors.phone && (
+                    <p className="mt-2 text-red-400 text-xs">{errors.phone}</p>
+                  )}
                 </div>
               </div>
 
@@ -155,12 +220,14 @@ export default function ApplyPage() {
                 <input
                   type="email"
                   name="email"
-                  required
                   value={form.email}
                   onChange={handleChange}
                   placeholder="example@email.com"
-                  className="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-white/20 focus:outline-none focus:border-white/30 transition"
+                  className={inputClass(!!errors.email)}
                 />
+                {errors.email && (
+                  <p className="mt-2 text-red-400 text-xs">{errors.email}</p>
+                )}
               </div>
 
               <div>
@@ -173,7 +240,7 @@ export default function ApplyPage() {
                   value={form.portfolio}
                   onChange={handleChange}
                   placeholder="https://your-portfolio.com"
-                  className="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-white/20 focus:outline-none focus:border-white/30 transition"
+                  className={inputClass(false)}
                 />
               </div>
 
@@ -183,13 +250,15 @@ export default function ApplyPage() {
                 </label>
                 <textarea
                   name="message"
-                  required
                   value={form.message}
                   onChange={handleChange}
                   placeholder="경력, 관심 분야, 지원 동기 등을 자유롭게 작성해주세요."
                   rows={6}
-                  className="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-white/20 focus:outline-none focus:border-white/30 transition resize-none"
+                  className={`${inputClass(!!errors.message)} resize-none`}
                 />
+                {errors.message && (
+                  <p className="mt-2 text-red-400 text-xs">{errors.message}</p>
+                )}
               </div>
 
               {error && (
@@ -198,7 +267,7 @@ export default function ApplyPage() {
 
               <button
                 type="submit"
-                disabled={!form.position || submitting}
+                disabled={submitting}
                 className="w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-white/90 transition disabled:opacity-30 disabled:cursor-not-allowed"
               >
                 {submitting ? "전송 중..." : "지원서 제출하기"}
