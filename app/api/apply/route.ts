@@ -1,10 +1,13 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: Request) {
   try {
+    if (!process.env.RESEND_API_KEY) {
+      return NextResponse.json({ error: "이메일 서비스가 설정되지 않았습니다." }, { status: 500 });
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const { name, email, phone, position, portfolio, message } = await req.json();
 
     if (!name || !email || !phone || !position || !message) {
