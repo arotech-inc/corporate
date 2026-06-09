@@ -64,7 +64,7 @@ export default function Home() {
           OUR PROJECTS
         </h2>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
 
           {/* BCM */}
           <a
@@ -148,7 +148,7 @@ export default function Home() {
         </div>
 
         {/* 3 Vision Cards */}
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-5 mb-20 text-left">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-5 mb-20 text-left">
 
           {/* Card 01 */}
           <div className="relative bg-zinc-900/80 border border-white/10 rounded-2xl p-8 overflow-hidden">
@@ -192,7 +192,7 @@ export default function Home() {
         </div>
 
         {/* Stats Row */}
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-16 text-center items-end">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-16 text-center items-end">
 
           <div className="flex flex-col items-center gap-3">
             <Image src="/v_icon4.png" alt="설립 연도" width={65} height={65} />
@@ -229,7 +229,7 @@ export default function Home() {
         variants={fadeUp}
         className="py-40 px-6 border-t border-white/10"
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
 
           {/* Heading */}
           <div className="relative rounded-3xl overflow-hidden mb-24">
