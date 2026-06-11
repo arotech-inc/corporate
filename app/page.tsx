@@ -325,9 +325,9 @@ export default function Home() {
             <p className="text-sm md:text-xs tracking-widest text-white/40 uppercase mb-8">Team Culture</p>
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { title: "자율적 의사결정", body: "각자의 영역에서 스스로 판단하고 실행합니다. 보고를 위한 보고는 없습니다." },
-                { title: "수평적 소통", body: "직급보다 논리가 먼저입니다. 누구나 의견을 내고, 최선의 답을 함께 찾습니다." },
-                { title: "성장을 위한 투자", body: "컨퍼런스, 도서, 교육비를 지원합니다. 개인의 성장이 곧 팀의 성장입니다." },
+                { title: "자율적 의사결정", body: "각자의 영역에서 스스로 판단하고 실행합니다. <br />보고를 위한 보고는 없습니다." },
+                { title: "수평적 소통", body: "직급보다 논리가 먼저입니다. <br />누구나 의견을 내고, 최선의 답을 함께 찾습니다." },
+                { title: "성장을 위한 투자", body: "컨퍼런스, 도서, 교육비를 지원합니다. <br />개인의 성장이 곧 팀의 성장입니다." },
               ].map(({ title, body }) => (
                 <div key={title} className="border-l-2 border-white/20 pl-6 py-2">
                   <h4 className="text-lg md:text-base font-bold mb-3">{title}</h4>
