@@ -357,14 +357,8 @@ export default function Home() {
                 { label: "저녁식사 지원", desc: "야근 시 저녁 식대 제공", icon: (
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3"/><path d="M16 15v7"/></svg>
                 )},
-                { label: "안마의자 제공", desc: "사무실 내 안마의자 비치", icon: (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M8 4c0-1.1.9-2 2-2h4a2 2 0 012 2v2a4 4 0 01-4 4 4 4 0 01-4-4V4z"/><path d="M6 10c-2 0-3 1.5-3 3v3a2 2 0 002 2h1"/><path d="M18 10c2 0 3 1.5 3 3v3a2 2 0 01-2 2h-1"/><path d="M6 18v3"/><path d="M18 18v3"/><path d="M6 14h12v4H6z"/></svg>
-                )},
                 { label: "다양한 간식 제공", desc: "음료 및 스낵바 상시 운영", icon: (
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/><path d="M8 12h2"/><path d="M14 12h2"/><path d="M10 16h4"/></svg>
-                )},
-                { label: "상담 프로그램", desc: "전문 심리 상담 지원", icon: (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>
                 )},
               ].map(({ icon, label, desc }) => (
                 <div key={label} className="group bg-zinc-900 border border-white/10 rounded-2xl px-6 py-6 text-center hover:bg-white hover:border-white transition-all duration-300 hover:scale-105 cursor-default">
