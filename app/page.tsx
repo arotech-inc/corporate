@@ -340,7 +340,7 @@ export default function Home() {
           {/* 복지 */}
           <div>
             <p className="text-xs tracking-widest text-white/40 uppercase mb-8">Benefits</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {[
                 { label: "자율복장", desc: "복장 제한 없음", icon: (
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2C9.5 2 8 3.5 8 5c0 1 .5 2 1.5 2.5L4 10v4l3-1v9h10v-9l3 1v-4l-5.5-2.5C15.5 7 16 6 16 5c0-1.5-1.5-3-4-3z"/></svg>
