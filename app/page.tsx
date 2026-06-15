@@ -64,7 +64,7 @@ export default function Home() {
           OUR PROJECTS
         </h2>
 
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 h-auto md:h-[600px]">
+        <div className="-mx-6 flex flex-col md:flex-row gap-2 h-auto md:h-[600px]">
           {[
             {
               name: "BCM",
@@ -86,7 +86,7 @@ export default function Home() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex-1 md:hover:flex-[2.2] h-80 md:h-full rounded-3xl overflow-hidden border border-white/10 transition-all duration-700 ease-in-out"
+              className="group relative flex-1 md:hover:flex-[2.2] h-80 md:h-full overflow-hidden transition-all duration-700 ease-in-out"
             >
               <Image
                 src={img}
