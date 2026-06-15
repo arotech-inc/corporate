@@ -64,58 +64,57 @@ export default function Home() {
           OUR PROJECTS
         </h2>
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+        <div className="max-w-7xl mx-auto flex flex-col gap-32">
+          {[
+            {
+              name: "BCM",
+              href: "https://bcm-lovat.vercel.app",
+              img: "/bcm.png",
+              alt: "BCM Screenshot",
+              desc: "전략과 데이터 기반 운영이 결합된 차세대 야구 시뮬레이션.",
+            },
+            {
+              name: "Dear Idol",
+              href: "https://dearidol.vercel.app",
+              img: "/idol.jpg",
+              alt: "Dear Idol Visual",
+              desc: "감성과 전략이 만나는 아이돌 프로듀싱 프로젝트.",
+            },
+          ].map(({ name, href, img, alt, desc }, i) => (
+            <a
+              key={name}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group grid md:grid-cols-2 gap-10 lg:gap-16 items-center"
+            >
+              {/* Image */}
+              <div
+                className={`relative h-72 md:h-[420px] lg:h-[480px] rounded-3xl overflow-hidden border border-white/10 ${
+                  i % 2 === 1 ? "md:order-2" : ""
+                }`}
+              >
+                <Image
+                  src={img}
+                  alt={alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={90}
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
 
-          {/* BCM */}
-          <a
-            href="https://bcm-lovat.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:scale-105"
-          >
-            <div className="relative h-48 md:h-64 lg:h-80 overflow-hidden">
-              <Image
-                src="/bcm.png"
-                alt="BCM Screenshot"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                quality={85}
-                className="object-cover transition duration-700 group-hover:scale-110"
-              />
-            </div>
-            <div className="p-10">
-              <h3 className="text-3xl font-bold mb-4">BCM</h3>
-              <p className="opacity-60">
-                전략과 데이터 기반 운영이 결합된 차세대 야구 시뮬레이션.
-              </p>
-            </div>
-          </a>
-
-          {/* Dear Idol */}
-          <a
-            href="https://dearidol.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 transition duration-500 hover:scale-105"
-          >
-            <div className="relative h-48 md:h-64 lg:h-80 overflow-hidden">
-              <Image
-                src="/idol.jpg"
-                alt="Dear Idol Visual"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                quality={85}
-                className="object-cover transition duration-700 group-hover:scale-110"
-              />
-            </div>
-            <div className="p-10">
-              <h3 className="text-3xl font-bold mb-4">Dear Idol</h3>
-              <p className="opacity-60">
-                감성과 전략이 만나는 아이돌 프로듀싱 프로젝트.
-              </p>
-            </div>
-          </a>
-
+              {/* Text */}
+              <div className={i % 2 === 1 ? "md:order-1" : ""}>
+                <h3 className="text-4xl lg:text-5xl font-bold mb-6">{name}</h3>
+                <p className="text-lg opacity-60 leading-relaxed">{desc}</p>
+                <span className="inline-flex items-center gap-2 mt-8 text-sm font-semibold tracking-wide opacity-70 group-hover:opacity-100 transition">
+                  자세히 보기
+                  <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                </span>
+              </div>
+            </a>
+          ))}
         </div>
       </motion.section>
 
