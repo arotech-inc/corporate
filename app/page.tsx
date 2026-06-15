@@ -64,7 +64,7 @@ export default function Home() {
           OUR PROJECTS
         </h2>
 
-        <div className="max-w-7xl mx-auto flex flex-col gap-32">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 h-auto md:h-[600px]">
           {[
             {
               name: "BCM",
@@ -80,35 +80,33 @@ export default function Home() {
               alt: "Dear Idol Visual",
               desc: "감성과 전략이 만나는 아이돌 프로듀싱 프로젝트.",
             },
-          ].map(({ name, href, img, alt, desc }, i) => (
+          ].map(({ name, href, img, alt, desc }) => (
             <a
               key={name}
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group grid md:grid-cols-2 gap-10 lg:gap-16 items-center"
+              className="group relative flex-1 md:hover:flex-[2.2] h-80 md:h-full rounded-3xl overflow-hidden border border-white/10 transition-all duration-700 ease-in-out"
             >
-              {/* Image */}
-              <div
-                className={`relative h-72 md:h-[420px] lg:h-[480px] rounded-3xl overflow-hidden border border-white/10 ${
-                  i % 2 === 1 ? "md:order-2" : ""
-                }`}
-              >
-                <Image
-                  src={img}
-                  alt={alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  quality={90}
-                  className="object-cover transition duration-700 group-hover:scale-105"
-                />
-              </div>
+              <Image
+                src={img}
+                alt={alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 70vw"
+                quality={90}
+                className="object-cover transition duration-700 group-hover:scale-105"
+              />
+
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
               {/* Text */}
-              <div className={i % 2 === 1 ? "md:order-1" : ""}>
-                <h3 className="text-4xl lg:text-5xl font-bold mb-6">{name}</h3>
-                <p className="text-lg opacity-60 leading-relaxed">{desc}</p>
-                <span className="inline-flex items-center gap-2 mt-8 text-sm font-semibold tracking-wide opacity-70 group-hover:opacity-100 transition">
+              <div className="absolute inset-x-0 bottom-0 p-8 lg:p-10">
+                <h3 className="text-3xl lg:text-5xl font-bold mb-3">{name}</h3>
+                <p className="text-base lg:text-lg opacity-0 max-h-0 group-hover:opacity-70 group-hover:max-h-24 overflow-hidden transition-all duration-500 leading-relaxed">
+                  {desc}
+                </p>
+                <span className="inline-flex items-center gap-2 mt-4 text-sm font-semibold tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                   자세히 보기
                   <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </span>
