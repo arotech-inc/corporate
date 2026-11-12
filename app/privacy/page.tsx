@@ -24,7 +24,7 @@ export default function PrivacyPage() {
       <section className="pt-16 pb-4 px-6">
         <div className="max-w-3xl mx-auto">
           <p className="text-white/60 leading-relaxed">
-            주식회사 에이로테크(이하 "회사")는 이용자의 개인정보를 중요하게 생각하며 다음과 같이 처리합니다.
+            주식회사 에이로테크(이하 &quot;회사&quot;)는 이용자의 개인정보를 중요하게 생각하며 다음과 같이 처리합니다.
           </p>
         </div>
       </section>

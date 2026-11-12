@@ -1,6 +1,15 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
+function escapeHtml(value: unknown): string {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 export async function POST(req: Request) {
   try {
     if (!process.env.RESEND_API_KEY) {
@@ -23,14 +32,14 @@ export async function POST(req: Request) {
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
           <h2>채용 지원서</h2>
           <table style="width: 100%; border-collapse: collapse;">
-            <tr><td style="padding: 8px; border: 1px solid #ddd;"><b>이름</b></td><td style="padding: 8px; border: 1px solid #ddd;">${name}</td></tr>
-            <tr><td style="padding: 8px; border: 1px solid #ddd;"><b>이메일</b></td><td style="padding: 8px; border: 1px solid #ddd;">${email}</td></tr>
-            <tr><td style="padding: 8px; border: 1px solid #ddd;"><b>연락처</b></td><td style="padding: 8px; border: 1px solid #ddd;">${phone}</td></tr>
-            <tr><td style="padding: 8px; border: 1px solid #ddd;"><b>지원 포지션</b></td><td style="padding: 8px; border: 1px solid #ddd;">${position}</td></tr>
-            <tr><td style="padding: 8px; border: 1px solid #ddd;"><b>포트폴리오</b></td><td style="padding: 8px; border: 1px solid #ddd;">${portfolio || "-"}</td></tr>
+            <tr><td style="padding: 8px; border: 1px solid #ddd;"><b>이름</b></td><td style="padding: 8px; border: 1px solid #ddd;">${escapeHtml(name)}</td></tr>
+            <tr><td style="padding: 8px; border: 1px solid #ddd;"><b>이메일</b></td><td style="padding: 8px; border: 1px solid #ddd;">${escapeHtml(email)}</td></tr>
+            <tr><td style="padding: 8px; border: 1px solid #ddd;"><b>연락처</b></td><td style="padding: 8px; border: 1px solid #ddd;">${escapeHtml(phone)}</td></tr>
+            <tr><td style="padding: 8px; border: 1px solid #ddd;"><b>지원 포지션</b></td><td style="padding: 8px; border: 1px solid #ddd;">${escapeHtml(position)}</td></tr>
+            <tr><td style="padding: 8px; border: 1px solid #ddd;"><b>포트폴리오</b></td><td style="padding: 8px; border: 1px solid #ddd;">${escapeHtml(portfolio || "-")}</td></tr>
           </table>
           <h3 style="margin-top: 24px;">자기소개</h3>
-          <p style="white-space: pre-wrap; padding: 16px; background: #f5f5f5; border-radius: 8px;">${message}</p>
+          <p style="white-space: pre-wrap; padding: 16px; background: #f5f5f5; border-radius: 8px;">${escapeHtml(message)}</p>
         </div>
       `,
     });

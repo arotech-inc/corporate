@@ -2,6 +2,7 @@
 
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import Link from "next/link";
 import { useState } from "react";
 
 const positions = [
@@ -132,12 +133,12 @@ export default function ApplyPage() {
               <p className="text-white/50 mb-8">
                 검토 후 빠른 시일 내에 연락 드리겠습니다.
               </p>
-              <a
+              <Link
                 href="/"
                 className="inline-block border border-white/20 rounded-full px-8 py-3 text-sm text-white/60 hover:text-white hover:border-white/40 transition"
               >
                 홈으로 돌아가기
-              </a>
+              </Link>
             </div>
           ) : (
             <form onSubmit={handleSubmit} noValidate className="space-y-8">
